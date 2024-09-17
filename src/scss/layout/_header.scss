@@ -1,0 +1,124 @@
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    
+    &__logo {
+        cursor: pointer;
+        width: 104px;
+        height: 28px;
+    }
+
+    &__container {
+        display: flex;
+        padding: 20px 0;
+        border-bottom: 1px solid black;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        font-size: 1.146vw;
+        gap: 48px;
+        margin: 0 0 0 10px;
+        padding: 0;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 64px;
+    }
+
+    &__button {
+        display: flex;
+        gap: 32px;
+        background-color: transparent;
+        text-transform: uppercase;
+        border: none;
+        font-weight: 600;
+        font-size: 1.146vw;
+        align-items: center;
+        cursor: pointer;
+        color: var(--primary-color);
+
+        &:hover {
+            color: var(--color-brand-ligth);
+
+            svg {
+                transform: rotate(20deg);
+            }
+        }
+
+        &:active {
+            color: var(--color-brand-dark);
+        }
+    }
+
+    
+
+    &__lang-button {
+        display: flex;
+
+        p {
+            color: var(--button-default-color);
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            font-weight: 800;
+            font-size: 1.146vw;
+
+            &.active {
+                color: var(--color-brand-ligth);
+            }
+
+            &.default {
+                color: var(--button-default-color);
+            }
+
+           &:hover {
+            cursor: pointer;
+
+            &.default {
+                color: var(--primary-color);
+            }
+           }
+
+           &:active {
+                &.default {
+                    color: var(--color-brand-ligth);
+                }
+           }
+        }
+    }
+
+    &__path-icon {
+        fill: var(--color-brand-ligth);
+    }
+
+    &__link {
+        text-decoration-line: none;
+        color: var(--primary-color);
+        white-space: nowrap;
+        font-weight: 500;
+
+        &:hover {
+            color: var(--color-brand-ligth);    
+        }
+    }
+}
+
+
+.header.show {
+    transform: translateY(0); /* Шапка видна */
+}
+
+.header.hide {
+    transform: translateY(-100%); /* Шапка скрыта */
+}

@@ -1,0 +1,62 @@
+.animation-section {
+    background-color: var(--color-brand-ligth);
+    height: 100%;
+    position: relative;
+    // z-index: 20;
+
+    img {
+        max-width: 11.198vw;
+        max-height: 11.198vw;
+    }
+
+    &__block-container {
+        height: 502px;
+        background-color: var(--color-brand-ligth);
+        position: relative;
+    }
+
+    &__pixel {
+        position: relative;
+        z-index: 101;
+    }
+    
+
+    &__block-pixel {
+        width: 25.573vw;
+        height: 26.979vw;
+    }
+
+    &__block-img {
+        width: 11.25vw;
+        height: 11.25vw;
+    }
+
+    &__group1 {
+        display: flex;
+        align-items: end;
+        justify-content: flex-end;
+        margin-bottom: -35px;
+    
+    }
+
+    &__group2 {
+        display: flex;
+        justify-content: center;
+        gap: 9px;
+        margin-bottom: -273px;
+    }
+
+    &__group3 {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+  
+    .rotate2 {
+        transform: rotate(45deg);
+    }
+
+    .rotate3 {
+        transform: rotate(21deg);
+    }
+}

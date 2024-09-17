@@ -1,0 +1,43 @@
+.about-section {
+    padding: 64px 0 263px;
+    background-color: var(--primary-color);
+    position: relative;
+    z-index: 30;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__animation-text {
+        display: flex;
+        align-items: center;
+        color: var(--color-white);
+        gap: 12px;
+        font-weight: 500;
+        font-size: 1.458vw;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__title {
+        color: var(--button-default-color);
+        font-weight: 500;
+        font-size: 3.125vw;
+        margin: 0;
+    }
+
+    &__text {
+        color: var(--button-default-color);
+        font-weight: 500;
+        font-size: 3.125vw;
+        margin: 0;
+
+        span {
+            font-size: 3.333vw;
+            color: var(--color-brand-ligth);
+        }
+    }
+}
