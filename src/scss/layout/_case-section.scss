@@ -88,7 +88,7 @@
 
     &__img-block {
         img {
-            width: 49.323vw;
+            max-width: 49.323vw;
             max-height: 566px;
         }
     }
@@ -141,6 +141,7 @@
 
     &__list {
         display: flex;
+        gap: 10px;
         padding: 0;
         justify-content: space-between;
     }
