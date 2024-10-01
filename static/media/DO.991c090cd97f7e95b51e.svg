@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 346.88 179.29">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d40000;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #000;
+      }
+
+      .cls-3 {
+        fill: #ff3400;
+      }
+    </style>
+  </defs>
+  <g id="_Слой_1-2" data-name="Слой 1">
+    <rect class="cls-2" x="187.51" y="19.92" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="207.43" y="19.92" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="247.28" y="19.92" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="287.12" y="19.92" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="307.04" y="19.92" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="207.43" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="227.35" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="247.28" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="267.2" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="287.12" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="167.59" y="39.84" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="187.51" y="39.84" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="307.04" y="39.84" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="167.59" y="59.76" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="247.28" y="59.76" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="167.59" y="79.69" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="187.51" y="79.69" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="227.35" y="79.69" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="247.28" y="79.69" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="267.2" y="79.69" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="307.04" y="79.69" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="167.59" y="99.61" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="247.28" y="99.61" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="167.59" y="119.53" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="187.51" y="119.53" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="307.04" y="119.53" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="187.51" y="139.45" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="207.43" y="139.45" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="247.28" y="139.45" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="287.12" y="139.45" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="307.04" y="139.45" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="207.43" y="159.37" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="227.35" y="159.37" width="19.92" height="19.92"/>
+    <rect class="cls-1" x="247.28" y="159.37" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="267.2" y="159.37" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="287.12" y="159.37" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="326.96" y="39.84" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="326.96" y="59.76" width="19.92" height="19.92"/>
+    <rect class="cls-3" x="326.96" y="79.69" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="326.96" y="99.61" width="19.92" height="19.92"/>
+    <rect class="cls-2" x="326.96" y="119.53" width="19.92" height="19.92"/>
+    <path class="cls-2" d="M0,179.29v-43.62c5.62,0,10.19-1.42,13.71-4.27,3.52-2.84,6.26-6.7,8.21-11.57,1.95-4.87,3.47-10.36,4.53-16.48,1.07-6.11,1.92-12.44,2.56-18.99.92-9.24,1.69-18.2,2.29-26.88.6-8.67,1.15-17.67,1.65-26.98.5-9.31,1.07-19.48,1.71-30.5l96.53.11v135.56h11.2v43.62h-18.99v-25.6H18.99v25.6H0ZM33.28,135.67h78.93V18.13l-59.94-.11c-.43,8.25-.84,16.16-1.23,23.73-.39,7.57-.87,15.2-1.44,22.88-.57,7.68-1.28,15.82-2.13,24.43-.78,7.96-1.65,14.84-2.61,20.64-.96,5.8-2.33,10.77-4.11,14.93-1.78,4.16-4.27,7.84-7.47,11.04Z"/>
+  </g>
+</svg>
