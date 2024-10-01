@@ -47,7 +47,7 @@ function AboutSection() {
     }, []);
 
     return (
-        <section className="about-section" ref={typingElementRef}>
+        <section id='about-section' className="about-section" ref={typingElementRef}>
             <div className="container">
                 <div className="about-section__container">
                     <span className="about-section__animation-text">

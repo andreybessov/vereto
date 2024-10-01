@@ -1,6 +1,6 @@
 import apostrophe from '../assets/ʼ.png';
 import divederLeft from '../assets/diveder-left.png';
-import divederRight from '../assets/divider-right.png';
+import divederRight from '../assets/diveder-right.png';
 import React, { useEffect } from 'react';
 import Typed from 'typed.js';
 import { ReactComponent as Arrow } from '../assets/arrow.svg';

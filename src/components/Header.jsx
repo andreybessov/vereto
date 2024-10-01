@@ -38,19 +38,19 @@ function Header() {
                     </a>
                     <ul className="header__menu">
                         <li className="header__item">
-                            <a id="headerLink1" className="header__link" href="#">Про нас</a>
+                            <a id="headerLink1" className="header__link" href="#about-section">Про нас</a>
                         </li>
                         <li className="header__item">
-                            <a id="headerLink2" className="header__link" href="#">Послуги</a>
+                            <a id="headerLink2" className="header__link" href="#project-section">Послуги</a>
                         </li>
                         <li className="header__item">
-                            <a id="headerLink3" className="header__link" href="#">Кейси</a>
+                            <a id="headerLink3" className="header__link" href="#case-section">Кейси</a>
                         </li>
                         <li className="header__item">
-                            <a id="headerLink4" className="header__link" href="#">Команда</a>
+                            <a id="headerLink4" className="header__link" href="#advantages-section">Команда</a>
                         </li>
                         <li className="header__item">
-                            <a id="headerLink5" className="header__link" href="#">Контакти</a>
+                            <a id="headerLink5" className="header__link" href="#contact-section">Контакти</a>
                         </li>
                     </ul>
                     <button className="header__button" type="button">

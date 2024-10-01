@@ -10,7 +10,8 @@
     }
 
     &__block-container {
-        height: 502px;
+        max-height: 502px;
+        height: 100%;
         background-color: var(--color-brand-ligth);
         position: relative;
     }
@@ -35,28 +36,36 @@
         display: flex;
         align-items: end;
         justify-content: flex-end;
-        margin-bottom: -35px;
-    
+        margin-bottom: -15.823vw;    
     }
 
     &__group2 {
         display: flex;
-        justify-content: center;
-        gap: 9px;
-        margin-bottom: -273px;
+        display: flex;
+        align-items: end;
+        margin-bottom: -5.917vw;
+
+        .el1 {
+            margin-bottom: -11.854vw;
+        }
+
+        .el4 {
+            margin-bottom: -6.958vw;
+        }
     }
 
     &__group3 {
         display: flex;
         align-items: end;
         justify-content: center;
-    }
-  
-    .rotate2 {
-        transform: rotate(45deg);
-    }
 
-    .rotate3 {
-        transform: rotate(21deg);
+        .el2 {
+            width: 20vw;
+            height: 20vw;
+        }
+
+        .el4 {
+            margin-bottom: -1.823vw;
+        }
     }
 }

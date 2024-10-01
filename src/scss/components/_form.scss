@@ -1,0 +1,118 @@
+.form {
+
+    &__input-name {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+        background: transparent;
+        padding: 16px;
+        outline: none;
+        font-size: 1.146vw;
+    }
+
+    &__email-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 48px;
+
+        input {
+            width: 31.458vw;
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+            padding: 16px;
+            outline: none;
+            font-size: 1.146vw;
+        }
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        p {
+            font-size: 0.938vw;
+            font-weight: 300;
+        }
+
+        img {
+            width: 0.625vw;
+            height: 1.458vw;
+        }
+    }
+
+    &__text-container {
+        margin-top: 48px;
+    }
+
+    &__input-text {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+        background: transparent;
+        padding: 16px;
+        outline: none;
+        font-size: 1.146vw;
+    }
+
+    &__button-container {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid black;
+        font-weight: 600;
+        font-size: 1.575vw;
+        width: 29.167vw;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        p {
+            margin: 0;
+        }
+
+        &:hover {
+            background-color: var(--color-brand-ligth);
+            color: var(--color-white);
+            border-bottom: none;
+             
+            svg {
+                transform: rotate(15deg);
+            }
+            // svg {
+            //     fill: blue;
+            // }
+
+            // svg path .path-icon {
+            //     fill: var(--primary-color);
+            // }
+
+
+            path:nth-child(3){
+                fill: var(--color-white);         
+            }
+
+            path:nth-child(4){
+                fill: var(--color-white);         
+            }
+
+            path:nth-child(5){
+                fill: var(--color-white);         
+            }
+        }
+
+        &:active {
+            background-color: var(--color-brand-dark);
+            color: var(--color-white)
+        }
+    }
+}

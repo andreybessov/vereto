@@ -1,0 +1,206 @@
+.case-section {
+
+    padding: 124px 0;
+
+    &__title {
+        font-weight: 500;
+        font-size: 8.333vw;
+        white-space: nowrap;
+
+        span {
+            color: var(--color-brand-ligth);
+        }
+    }
+
+    &__title-el2 {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        font-size: 5.208vw;
+        font-weight: 500;
+        margin-bottom: 124px;
+    }
+    
+    &__span-container {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 0.729vw;
+            max-height: 1.667vw
+        }
+    }
+
+    &__animation-text {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 1.146vw;
+        font-weight: 500;
+        font-size: 1.146vw;
+        text-transform: uppercase;
+        color: var(--button-default-color);
+        width: 255px;
+
+        p {
+            white-space: nowrap;
+        }
+    }
+
+    &__content-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 64px;
+    }
+
+    &__text-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__text-content {
+        h2 {
+            font-size: 1.875vw;
+            font-weight: 800;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 1.146vw;
+            margin-right: 12.656vw;
+
+            span {
+                font-weight: 700;
+                font-size: 1.25vw;
+            }
+        }
+    }
+
+    &__span-name {
+        font-weight: 500;
+        font-size: 1.458vw;
+        color: var(--color-brand-ligth);
+    }
+
+    &__img-block {
+        img {
+            width: 49.323vw;
+            max-height: 566px;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: space-between;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 1.667vw;
+        text-transform: uppercase;
+        align-items: center;
+        cursor: pointer;
+        max-height: 3.542vw;
+        text-decoration: none;
+        color: var(--color-brand-ligth);
+
+        &:hover {
+            background-color: var(--color-brand-ligth);
+            color: var(--color-white);
+            padding: 28px 3px 28px 15px;
+            border-bottom: none;
+             
+            svg {
+                transform: rotate(15deg);
+            }
+
+            path:nth-child(3){
+                fill: var(--color-white);         
+            }
+
+            path:nth-child(4){
+                fill: var(--color-white);         
+            }
+
+            path:nth-child(5){
+                fill: var(--color-white);         
+            }
+        }
+
+    }
+
+    &__arrow {
+        width: 2.708vw;
+        height: 2.708vw;
+    }
+
+    &__list {
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    &__item-number {
+        display: flex;
+        align-items: center;
+        margin-bottom: 11px;
+
+        img {
+            max-height: 32px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__item {
+        cursor: pointer;
+        filter: opacity(0.4);     
+    }
+
+    .card1 {
+        background: url('/src/assets/img-case-1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 17.656vw;
+        height: 13.281vw;
+    }
+    .card2 {
+        background: url('/src/assets/card2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 17.656vw;
+        height: 13.281vw;
+    }
+    .card3 {
+        background: url('/src/assets/card3.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 17.656vw;
+        height: 13.281vw;
+    }
+    .card4 {
+        background: url('/src/assets/card4.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 17.656vw;
+        height: 13.281vw;
+    }
+    .card5 {
+        background: url('/src/assets/card5.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 17.656vw;
+        height: 13.281vw;
+    }
+
+    .active {
+        filter: opacity(1);
+    }   
+}
