@@ -25,7 +25,8 @@
         font-weight: 500;
 
         &:hover {
-            color: var(--color-white);
+            color: var(--color-brand-ligth);
+            transition: color .3s ease-in-out;
         }
     }
 
@@ -40,7 +41,8 @@
             text-transform: uppercase;
 
             &:hover {
-                color: var(--color-footer);
+                color: var(--color-brand-ligth);
+                transition: color .3s ease-in-out;
             }
         }
     }
@@ -57,7 +59,8 @@
             text-transform: uppercase;
 
             &:hover {
-                color: var(--color-footer);
+                color: var(--color-brand-ligth);
+                transition: color .3s ease-in-out;
             }
         }
     }
@@ -86,7 +89,8 @@
             color: var(--color-footer);
 
             &:hover {
-                color: var(--color-white);
+                color: var(--color-brand-ligth);
+                transition: color .3s ease-in-out;
             }
         }
     }

@@ -33,29 +33,29 @@ function AnimationSection({ isHovered }) {
         gsap.to(group3.children, {
             y: 0, 
             opacity: 1,
-            duration: 2,
+            duration: 3,
             ease: 'bounce.out', 
-            stagger: 0.2 
+            stagger: 0.3 
         });
 
         // Падение для группы 2
         gsap.to(group2.children, {
             y: 0, 
             opacity: 1, 
-            duration: 2, 
+            duration: 3, 
             ease: 'bounce.out',
             stagger: 0.2,
-            delay: 0.3 // Легкая задержка перед началом
+            delay: 0.5 // Легкая задержка перед началом
         });
 
         // Падение для группы 1
         gsap.to(group1.children, {
             y: 0, 
             opacity: 1, 
-            duration: 2, 
+            duration: 3, 
             ease: 'bounce.out',
             stagger: 0.2,
-            delay: 0.5 // Больше задержки перед началом
+            delay: 0.9 // Больше задержки перед началом
         });
     };
 

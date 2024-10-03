@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Typed from 'typed.js';
 import divederLeftColor from '../assets/about-diveder-left.png';
 import divederRightColor from '../assets/about-diveder-right.png';
@@ -6,6 +6,7 @@ import divederRightColor from '../assets/about-diveder-right.png';
 function AboutSection() {
     const typingElementRef = useRef(null); 
     const typedInstanceRef = useRef(null); 
+    const [animationStarted, setAnimationStarted] = useState(false); // Для отслеживания запуска анимации
 
     useEffect(() => {
         const options = {
@@ -18,12 +19,10 @@ function AboutSection() {
 
         const handleIntersection = (entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !animationStarted) {
+                    // Запускаем анимацию только один раз
                     typedInstanceRef.current = new Typed("#typingTextAbout", options);
-                } else {
-                    if (typedInstanceRef.current) {
-                        typedInstanceRef.current.destroy();
-                    }
+                    setAnimationStarted(true); // Помечаем, что анимация была запущена
                 }
             });
         };
@@ -40,11 +39,8 @@ function AboutSection() {
             if (typingElementRef.current) {
                 observer.unobserve(typingElementRef.current); 
             }
-            if (typedInstanceRef.current) {
-                typedInstanceRef.current.destroy(); 
-            }
         };
-    }, []);
+    }, [animationStarted]); // Добавили зависимость от animationStarted
 
     return (
         <section id='about-section' className="about-section" ref={typingElementRef}>

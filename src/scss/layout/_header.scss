@@ -4,7 +4,13 @@
     width: 100%;
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
-    
+    background: var(--color-white);
+    border-bottom: 1px solid black; // По умолчанию бордер присутствует
+
+    &.no-border {
+        border-bottom: none; // Убираем бордер, если шапка появляется после скролла вниз
+    }
+
     &__logo {
         cursor: pointer;
         width: 104px;
@@ -14,7 +20,6 @@
     &__container {
         display: flex;
         padding: 20px 0;
-        border-bottom: 1px solid black;
         width: 100%;
         justify-content: space-between;
     }
@@ -27,11 +32,6 @@
         gap: 48px;
         margin: 0 0 0 10px;
         padding: 0;
-    }
-
-    &__buttons {
-        display: flex;
-        gap: 64px;
     }
 
     &__button {
@@ -48,9 +48,11 @@
 
         &:hover {
             color: var(--color-brand-ligth);
+            transition: color .3s ease-in-out;
 
             svg {
                 transform: rotate(20deg);
+                transition: transform .5s ease-in-out;
             }
         }
 
@@ -58,8 +60,6 @@
             color: var(--color-brand-dark);
         }
     }
-
-    
 
     &__lang-button {
         display: flex;
@@ -82,24 +82,20 @@
                 color: var(--button-default-color);
             }
 
-           &:hover {
-            cursor: pointer;
+            &:hover {
+                cursor: pointer;
 
-            &.default {
-                color: var(--primary-color);
+                &.default {
+                    color: var(--primary-color);
+                }
             }
-           }
 
-           &:active {
+            &:active {
                 &.default {
                     color: var(--color-brand-ligth);
                 }
-           }
+            }
         }
-    }
-
-    &__path-icon {
-        fill: var(--color-brand-ligth);
     }
 
     &__link {
@@ -107,18 +103,18 @@
         color: var(--primary-color);
         white-space: nowrap;
         font-weight: 500;
+        transition: color .3s ease-in-out;
 
         &:hover {
             color: var(--color-brand-ligth);    
         }
     }
-}
 
+    &.show {
+        transform: translateY(0); /* Шапка видна */
+    }
 
-.header.show {
-    transform: translateY(0); /* Шапка видна */
-}
-
-.header.hide {
-    transform: translateY(-100%); /* Шапка скрыта */
+    &.hide {
+        transform: translateY(-100%); /* Шапка скрыта */
+    }
 }

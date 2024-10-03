@@ -58,7 +58,9 @@ function HeroSection() {
                             </span>
                         </div>
                     </div>
-                    <button className="hero-section__button" type="button"><p>Почати партнерство</p><Arrow/></button>
+                        <a className='hero-section__button' href='#form-section'>
+                            <p>Почати партнерство</p><Arrow/>
+                        </a>
                 </div>
             </div>
         </section>

@@ -13,14 +13,14 @@ function AdvantagesSection() {
             name: 'Яна Травка',
             role: 'Web & UX/UI Дизайнер',
             quoteFirstPart: 'Дизайн - це не про роботу, це мій',
-            quoteSecondPart: 'спосіб життя, я надихаюся кожним процесом, від ідеї до реалізації.Як казав Генрі Мур: Мистецтво — це спосіб бачити речі по-іншому. Не важливо, чи у вас є ідея, чи ні — мій досвід дозволяє генерувати, аналізувати і створювати стильні та ефективні рішення',
+            quoteSecondPart: 'спосіб життя, я надихаюся кожним процесом, від ідеї до реалізації. Як казав Генрі Мур: Мистецтво — це спосіб бачити речі по-іншому. Не важливо, чи у вас є ідея, чи ні — мій досвід дозволяє генерувати, аналізувати і створювати стильні та ефективні рішення',
             image: teamCard1,
         },
         {
             name: 'Владислав Марущенко',
             role: 'Графічний дизайнер',
             quoteFirstPart: 'Гарний дизайн — це гармонія між',
-            quoteSecondPart: 'формою і функцією.Він змушує зупинитися і подумати.І в цьому мистецстві, я спеціаліст',
+            quoteSecondPart: 'формою і функцією. Він змушує зупинитися і подумати. І в цьому мистецтві, я спеціаліст',
             image: teamCard2,
         },
         {
@@ -35,6 +35,7 @@ function AdvantagesSection() {
     const [activeMember, setActiveMember] = useState(teamMembers[0]); // Устанавливаем Яну как активную по умолчанию
     const typingElementRef = useRef(null); 
     const typedInstanceRef = useRef(null); 
+    const [animationStarted, setAnimationStarted] = useState(false); // Стейт для отслеживания запуска анимации
 
     const handleCardClick = (member) => {
         setActiveMember(member); // Меняем активного члена команды при клике на карточку
@@ -51,12 +52,10 @@ function AdvantagesSection() {
 
         const handleIntersection = (entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !animationStarted) {
+                    // Запускаем анимацию только один раз
                     typedInstanceRef.current = new Typed("#advantagesTextAnimation", options);
-                } else {
-                    if (typedInstanceRef.current) {
-                        typedInstanceRef.current.destroy();
-                    }
+                    setAnimationStarted(true); // Отмечаем, что анимация уже была запущена
                 }
             });
         };
@@ -66,18 +65,15 @@ function AdvantagesSection() {
         });
 
         if (typingElementRef.current) {
-            observer.observe(typingElementRef.current); 
+            observer.observe(typingElementRef.current);
         }
 
         return () => {
             if (typingElementRef.current) {
-                observer.unobserve(typingElementRef.current); 
-            }
-            if (typedInstanceRef.current) {
-                typedInstanceRef.current.destroy(); 
+                observer.unobserve(typingElementRef.current);
             }
         };
-    }, []);
+    }, [animationStarted]); // Добавили зависимость от animationStarted, чтобы анимация запускалась только один раз
 
     return (
         <section id='advantages-section' className="advantages-section" ref={typingElementRef}>

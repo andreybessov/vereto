@@ -70,13 +70,16 @@
         border-bottom: 1px solid var(--button-default-color);
         filter: opacity(0.5);
         cursor: pointer;
+        
 
         &:hover {
             filter: opacity(1);
+            transition: filter .3s ease-in-out;
 
             h3,
             p {
                 color: var(--color-white);
+                transition: color .3s ease-in-out;
             }
         }
     }
@@ -85,12 +88,14 @@
         font-weight: 600;
         font-size: 1.667vw;
         text-transform: uppercase;
+        font-family: 'Manrope', sans-serif;
     }
 
     &__card-text {
         font-weight: 400;
         font-size: 1.146vw;
         text-transform: uppercase;
+        font-family: 'Manrope', sans-serif;
     }
 
     &__text-container {

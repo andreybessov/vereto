@@ -5,32 +5,31 @@ import { ReactComponent as Arrow } from '../assets/arrow.svg';
 function Header() {
     const [showHeader, setShowHeader] = useState(true); 
     const [lastScrollY, setLastScrollY] = useState(0); 
+    const [scrolledDown, setScrolledDown] = useState(false); // Новое состояние для отслеживания, был ли скролл вниз
 
-    // Функция для отслеживания направления скролла
     const handleScroll = () => {
         const currentScrollY = window.scrollY;
 
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
             setShowHeader(false);
+            setScrolledDown(true); // Устанавливаем флаг, что был скролл вниз
         } else if (currentScrollY < lastScrollY) {
-            // Скроллим вверх — показать шапку
             setShowHeader(true);
         }
 
         setLastScrollY(currentScrollY);
     };
 
-    // Добавляем обработчик скроллинга
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll); // Убираем обработчик при размонтировании
+            window.removeEventListener('scroll', handleScroll);
         };
     }, [lastScrollY]);
 
     return (
-        <header className={`header ${showHeader ? 'show' : 'hide'}`}>
+        <header className={`header ${showHeader ? 'show' : 'hide'} ${scrolledDown ? 'no-border' : ''}`}>
             <div className="container">
                 <div className="header__container">
                     <a className="header__logo" href="index.html">
@@ -50,7 +49,7 @@ function Header() {
                             <a id="headerLink4" className="header__link" href="#advantages-section">Команда</a>
                         </li>
                         <li className="header__item">
-                            <a id="headerLink5" className="header__link" href="#contact-section">Контакти</a>
+                            <a id="headerLink5" className="header__link" href="#form-section">Контакти</a>
                         </li>
                     </ul>
                     <button className="header__button" type="button">

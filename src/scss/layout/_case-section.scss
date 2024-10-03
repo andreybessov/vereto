@@ -7,6 +7,10 @@
         font-size: 8.333vw;
         white-space: nowrap;
 
+        img{
+            margin-bottom: -0.8vw;
+        }
+
         span {
             color: var(--color-brand-ligth);
         }
@@ -52,7 +56,7 @@
 
     &__content-container {
         display: flex;
-        justify-content: space-between;
+        gap: 0.625vw;
         margin-bottom: 64px;
     }
 
@@ -66,17 +70,13 @@
         h2 {
             font-size: 1.875vw;
             font-weight: 800;
+            font-family: 'Manrope', sans-serif;
         }
 
         p {
             font-weight: 500;
             font-size: 1.146vw;
             margin-right: 12.656vw;
-
-            span {
-                font-weight: 700;
-                font-size: 1.25vw;
-            }
         }
     }
 
@@ -88,8 +88,8 @@
 
     &__img-block {
         img {
-            max-width: 49.323vw;
-            max-height: 566px;
+            width: 49.323vw;
+            height: 29.479vw;
         }
     }
 
@@ -112,11 +112,13 @@
         &:hover {
             background-color: var(--color-brand-ligth);
             color: var(--color-white);
-            padding: 28px 3px 28px 15px;
+            padding: 0 0 0 15px;
             border-bottom: none;
+            transition: background, color, padding, .5s ease-in-out;
              
             svg {
                 transform: rotate(15deg);
+                transition: transform .5s ease-in-out;
             }
 
             path:nth-child(3){
@@ -162,7 +164,12 @@
 
     &__item {
         cursor: pointer;
-        filter: opacity(0.4);     
+        filter: opacity(0.4);
+
+        &:hover {
+            filter: opacity(1);
+            transition: filter .3s ease-in-out;
+        }
     }
 
     .card1 {

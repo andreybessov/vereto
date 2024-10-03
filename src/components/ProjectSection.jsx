@@ -8,8 +8,9 @@ import { ReactComponent as Minus } from '../assets/minus.svg';
 import apostrophe from '../assets/ʼ.png';
 
 function ProjectSection() {
-    const typingElementRef = useRef(null); 
-    const typedInstanceRef = useRef(null); 
+    const typingElementRef = useRef(null);
+    const typedInstanceRef = useRef(null);
+    const [animationStarted, setAnimationStarted] = useState(false); // Стейт для отслеживания запуска анимации
 
     useEffect(() => {
         const options = {
@@ -17,17 +18,15 @@ function ProjectSection() {
             typeSpeed: 50,
             backSpeed: 25,
             showCursor: false,
-            startDelay: 300,
+            startDelay: 0,
         };
 
         const handleIntersection = (entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !animationStarted) {
+                    // Запускаем анимацию только один раз
                     typedInstanceRef.current = new Typed("#text-animation", options);
-                } else {
-                    if (typedInstanceRef.current) {
-                        typedInstanceRef.current.destroy();
-                    }
+                    setAnimationStarted(true); // Отмечаем, что анимация уже была запущена
                 }
             });
         };
@@ -37,30 +36,26 @@ function ProjectSection() {
         });
 
         if (typingElementRef.current) {
-            observer.observe(typingElementRef.current); 
+            observer.observe(typingElementRef.current);
         }
 
         return () => {
             if (typingElementRef.current) {
-                observer.unobserve(typingElementRef.current); 
-            }
-            if (typedInstanceRef.current) {
-                typedInstanceRef.current.destroy(); 
+                observer.unobserve(typingElementRef.current);
             }
         };
-    }, []);
+    }, [animationStarted]); // Добавили зависимость от animationStarted
 
-    // Используем стейт для отслеживания, какая кнопка активна
+    // Стейт для отслеживания активной кнопки
     const [activeIndex, setActiveIndex] = useState(null);
 
-    
     // Функция для переключения активной кнопки
     const handleToggle = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
     return (
-        <section id='project-section' className="project-section " ref={typingElementRef}>
+        <section id='project-section' className="project-section" ref={typingElementRef}>
             <div className="container">
                 <div className="project-section__title-container">
                     <div className="project-section__title-first-container">
@@ -89,7 +84,7 @@ function ProjectSection() {
                             <img className="project-section__diveder" src={divederRight} alt="}" />
                         </span>
                         <span className="project-section__button-span2">
-                            <p className='project-section__button-title'project-section__button-title>WEB ДИЗАЙН {activeIndex === 0 ? <Minus /> : <Plus />}</p>
+                            <p className='project-section__button-title'>WEB ДИЗАЙН {activeIndex === 0 ? <Minus /> : <Plus />}</p>
                             {activeIndex === 0 && (
                                 <div className="project-section__dropdown">
                                     <p>LANDING PAGE</p>
@@ -138,12 +133,10 @@ function ProjectSection() {
                             <p className='project-section__button-title'>BRANDING {activeIndex === 2 ? <Minus /> : <Plus />}</p>
                             {activeIndex === 2 && (
                                 <div className="project-section__dropdown">
-                                    <p>КОРПОРАТИВНИЙ САЙТ</p>
-                                    <p>ONLINE МАГАЗИН</p>
-                                    <p>МАРКЕТПЛЕЙС</p>
-                                    <p>CRM СИСТЕМИ</p>
-                                    <p>FINTECH</p>
-                                    <p>SAAS</p>
+                                    <p>ФІРМОВИЙ СТИЛЬ</p>
+                                    <p>ЛОГОТИП</p>
+                                    <p>БРЕНДБУК</p>
+                                    <p>АЙДЕНТИКА</p>
                                 </div>
                             )}
                         </span>
@@ -162,12 +155,10 @@ function ProjectSection() {
                             <p className='project-section__button-title'>SOCIAL MEDIA {activeIndex === 3 ? <Minus /> : <Plus />}</p>
                             {activeIndex === 3 && (
                                 <div className="project-section__dropdown">
-                                    <p>КОРПОРАТИВНИЙ САЙТ</p>
-                                    <p>ONLINE МАГАЗИН</p>
-                                    <p>МАРКЕТПЛЕЙС</p>
-                                    <p>CRM СИСТЕМИ</p>
-                                    <p>FINTECH</p>
-                                    <p>SAAS</p>
+                                    <p>СОЦІАЛЬНІ МЕРЕЖІ</p>
+                                    <p>КОНТЕНТ-МАРКЕТИНГ</p>
+                                    <p>SMO</p>
+                                    <p>МЕНЕДЖМЕНТ</p>
                                 </div>
                             )}
                         </span>
@@ -186,12 +177,10 @@ function ProjectSection() {
                             <p className='project-section__button-title'>МЕРЧ {activeIndex === 4 ? <Minus /> : <Plus />}</p>
                             {activeIndex === 4 && (
                                 <div className="project-section__dropdown">
-                                    <p>КОРПОРАТИВНИЙ САЙТ</p>
-                                    <p>ONLINE МАГАЗИН</p>
-                                    <p>МАРКЕТПЛЕЙС</p>
-                                    <p>CRM СИСТЕМИ</p>
-                                    <p>FINTECH</p>
-                                    <p>SAAS</p>
+                                    <p>ОДЯГ</p>
+                                    <p>АКСЕСУАРИ</p>
+                                    <p>ПОЛІГРАФІЯ</p>
+                                    <p>БРЕНДОВАНА ПРОДУКЦІЯ</p>
                                 </div>
                             )}
                         </span>
@@ -210,18 +199,16 @@ function ProjectSection() {
                             <p className='project-section__button-title'>MAINTENANCE {activeIndex === 5 ? <Minus /> : <Plus />}</p>
                             {activeIndex === 5 && (
                                 <div className="project-section__dropdown">
-                                    <p>КОРПОРАТИВНИЙ САЙТ</p>
-                                    <p>ONLINE МАГАЗИН</p>
-                                    <p>МАРКЕТПЛЕЙС</p>
-                                    <p>CRM СИСТЕМИ</p>
-                                    <p>FINTECH</p>
-                                    <p>SAAS</p>
+                                    <p>ТЕХНІЧНА ПІДТРИМКА</p>
+                                    <p>КОНСУЛЬТАЦІЇ</p>
+                                    <p>ОНОВЛЕННЯ</p>
+                                    <p>БЕКАП</p>
                                 </div>
                             )}
                         </span>
                     </button>
                 </div>
-                <button className="project-section__hero-button" type="button"><p>Почати партнерство</p><Arrow/></button>
+                <a className='project-section__hero-button' href="#form-contact"><p>Почати партнерство</p><Arrow/></a>
             </div>
         </section>
     );
