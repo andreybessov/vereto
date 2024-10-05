@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+import { motion } from 'framer-motion'; // Добавили Framer Motion
 import divederLeft from '../assets/diveder-left.png';
 import divederRight from '../assets/diveder-right.png';
 import { ReactComponent as Arrow } from '../assets/arrow.svg';
@@ -85,14 +86,20 @@ function ProjectSection() {
                         </span>
                         <span className="project-section__button-span2">
                             <p className='project-section__button-title'>WEB ДИЗАЙН {activeIndex === 0 ? <Minus /> : <Plus />}</p>
-                            {activeIndex === 0 && (
-                                <div className="project-section__dropdown">
-                                    <p>LANDING PAGE</p>
-                                    <p>ПОРТФОЛІО</p>
-                                    <p>ПРОМО-САЙТ</p>
-                                    <p>САЙТ ДЛЯ ІВЕНТІВ</p>
-                                </div>
-                            )}
+                            <motion.div
+                                className="project-section__dropdown"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={activeIndex === 0 ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+                                exit={{ height: 0, opacity: 0 }} // Анимация закрытия
+                                transition={{ duration: 0.5 }}
+                                layout // Добавили layout для плавного изменения высоты
+                                style={{ overflow: 'hidden' }}
+                            >
+                                <p>LANDING PAGE</p>
+                                <p>ПОРТФОЛІО</p>
+                                <p>ПРОМО-САЙТ</p>
+                                <p>САЙТ ДЛЯ ІВЕНТІВ</p>
+                            </motion.div>
                         </span>
                     </button>
 
@@ -107,16 +114,22 @@ function ProjectSection() {
                         </span>
                         <span className="project-section__button-span2">
                             <p className='project-section__button-title'>UX/UI ДИЗАЙН {activeIndex === 1 ? <Minus /> : <Plus />}</p>
-                            {activeIndex === 1 && (
-                                <div className="project-section__dropdown">
-                                    <p>КОРПОРАТИВНИЙ САЙТ</p>
-                                    <p>ONLINE МАГАЗИН</p>
-                                    <p>МАРКЕТПЛЕЙС</p>
-                                    <p>CRM СИСТЕМИ</p>
-                                    <p>FINTECH</p>
-                                    <p>SAAS</p>
-                                </div>
-                            )}
+                            <motion.div
+                                className="project-section__dropdown"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={activeIndex === 1 ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+                                exit={{ height: 0, opacity: 0 }} // Анимация закрытия
+                                transition={{ duration: 0.5 }}
+                                layout // Добавили layout для плавного изменения высоты
+                                style={{ overflow: 'hidden' }}
+                            >
+                                <p>КОРПОРАТИВНИЙ САЙТ</p>
+                                <p>ONLINE МАГАЗИН</p>
+                                <p>МАРКЕТПЛЕЙС</p>
+                                <p>CRM СИСТЕМИ</p>
+                                <p>FINTECH</p>
+                                <p>SAAS</p>
+                            </motion.div>
                         </span>
                     </button>
 
@@ -131,14 +144,20 @@ function ProjectSection() {
                         </span>
                         <span className="project-section__button-span2">
                             <p className='project-section__button-title'>BRANDING {activeIndex === 2 ? <Minus /> : <Plus />}</p>
-                            {activeIndex === 2 && (
-                                <div className="project-section__dropdown">
-                                    <p>ФІРМОВИЙ СТИЛЬ</p>
-                                    <p>ЛОГОТИП</p>
-                                    <p>БРЕНДБУК</p>
-                                    <p>АЙДЕНТИКА</p>
-                                </div>
-                            )}
+                            <motion.div
+                                className="project-section__dropdown"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={activeIndex === 2 ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+                                exit={{ height: 0, opacity: 0 }} // Анимация закрытия
+                                transition={{ duration: 0.5 }}
+                                layout // Добавили layout для плавного изменения высоты
+                                style={{ overflow: 'hidden' }}
+                            >
+                                <p>ФІРМОВИЙ СТИЛЬ</p>
+                                <p>ЛОГОТИП</p>
+                                <p>БРЕНДБУК</p>
+                                <p>АЙДЕНТИКА</p>
+                            </motion.div>
                         </span>
                     </button>
 
@@ -153,14 +172,20 @@ function ProjectSection() {
                         </span>
                         <span className="project-section__button-span2">
                             <p className='project-section__button-title'>SOCIAL MEDIA {activeIndex === 3 ? <Minus /> : <Plus />}</p>
-                            {activeIndex === 3 && (
-                                <div className="project-section__dropdown">
-                                    <p>СОЦІАЛЬНІ МЕРЕЖІ</p>
-                                    <p>КОНТЕНТ-МАРКЕТИНГ</p>
-                                    <p>SMO</p>
-                                    <p>МЕНЕДЖМЕНТ</p>
-                                </div>
-                            )}
+                            <motion.div
+                                className="project-section__dropdown"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={activeIndex === 3 ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+                                exit={{ height: 0, opacity: 0 }} // Анимация закрытия
+                                transition={{ duration: 0.5 }}
+                                layout // Добавили layout для плавного изменения высоты
+                                style={{ overflow: 'hidden' }}
+                            >
+                                <p>СОЦІАЛЬНІ МЕРЕЖІ</p>
+                                <p>КОНТЕНТ-МАРКЕТИНГ</p>
+                                <p>SMO</p>
+                                <p>МЕНЕДЖМЕНТ</p>
+                            </motion.div>
                         </span>
                     </button>
 
@@ -175,14 +200,20 @@ function ProjectSection() {
                         </span>
                         <span className="project-section__button-span2">
                             <p className='project-section__button-title'>МЕРЧ {activeIndex === 4 ? <Minus /> : <Plus />}</p>
-                            {activeIndex === 4 && (
-                                <div className="project-section__dropdown">
-                                    <p>ОДЯГ</p>
-                                    <p>АКСЕСУАРИ</p>
-                                    <p>ПОЛІГРАФІЯ</p>
-                                    <p>БРЕНДОВАНА ПРОДУКЦІЯ</p>
-                                </div>
-                            )}
+                            <motion.div
+                                className="project-section__dropdown"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={activeIndex === 4 ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+                                exit={{ height: 0, opacity: 0 }} // Анимация закрытия
+                                transition={{ duration: 0.5 }}
+                                layout // Добавили layout для плавного изменения высоты
+                                style={{ overflow: 'hidden' }}
+                            >
+                                <p>ОДЯГ</p>
+                                <p>АКСЕСУАРИ</p>
+                                <p>ПОЛІГРАФІЯ</p>
+                                <p>БРЕНДОВАНА ПРОДУКЦІЯ</p>
+                            </motion.div>
                         </span>
                     </button>
 
@@ -197,14 +228,20 @@ function ProjectSection() {
                         </span>
                         <span className="project-section__button-span2">
                             <p className='project-section__button-title'>MAINTENANCE {activeIndex === 5 ? <Minus /> : <Plus />}</p>
-                            {activeIndex === 5 && (
-                                <div className="project-section__dropdown">
-                                    <p>ТЕХНІЧНА ПІДТРИМКА</p>
-                                    <p>КОНСУЛЬТАЦІЇ</p>
-                                    <p>ОНОВЛЕННЯ</p>
-                                    <p>БЕКАП</p>
-                                </div>
-                            )}
+                            <motion.div
+                                className="project-section__dropdown"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={activeIndex === 5 ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+                                exit={{ height: 0, opacity: 0 }} // Анимация закрытия
+                                transition={{ duration: 0.5 }}
+                                layout // Добавили layout для плавного изменения высоты
+                                style={{ overflow: 'hidden' }}
+                            >
+                                <p>ТЕХНІЧНА ПІДТРИМКА</p>
+                                <p>КОНСУЛЬТАЦІЇ</p>
+                                <p>ОНОВЛЕННЯ</p>
+                                <p>БЕКАП</p>
+                            </motion.div>
                         </span>
                     </button>
                 </div>
