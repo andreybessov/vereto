@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/vereto/static/css/main.6548db2b.css",
-    "main.js": "/vereto/static/js/main.a406becc.js",
+    "main.js": "/vereto/static/js/main.a733957d.js",
     "static/media/picasso.png": "/vereto/static/media/picasso.94e2f7514ff48a10292c.png",
     "static/media/img-case-1.png": "/vereto/static/media/img-case-1.0016b3533595bc0304d4.png",
     "static/media/card5.png": "/vereto/static/media/card5.42ac172497921a64e6f9.png",
@@ -30,10 +30,10 @@
     "static/media/minus.svg": "/vereto/static/media/minus.bc7cf757452ec4edfd8043d6b84a688d.svg",
     "static/media/plus.svg": "/vereto/static/media/plus.9ae672cbae332b3bf0cde1c8a7b6b9e0.svg",
     "main.6548db2b.css.map": "/vereto/static/css/main.6548db2b.css.map",
-    "main.a406becc.js.map": "/vereto/static/js/main.a406becc.js.map"
+    "main.a733957d.js.map": "/vereto/static/js/main.a733957d.js.map"
   },
   "entrypoints": [
     "static/css/main.6548db2b.css",
-    "static/js/main.a406becc.js"
+    "static/js/main.a733957d.js"
   ]
 }
