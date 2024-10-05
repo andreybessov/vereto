@@ -49,7 +49,7 @@ function Header() {
                             <a id="headerLink4" className="header__link" href="#advantages-section">Команда</a>
                         </li>
                         <li className="header__item">
-                            <a id="headerLink5" className="header__link" href="#form-section">Контакти</a>
+                            <a id="headerLink5" className="header__link" href="#contact-email">Контакти</a>
                         </li>
                     </ul>
                         <a className="header__button" href="#contact-email">

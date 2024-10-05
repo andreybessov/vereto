@@ -57,7 +57,7 @@
     &__content-container {
         display: flex;
         gap: 0.625vw;
-        margin-bottom: 64px;
+        margin-bottom: 3.333vw;
     }
 
     &__text-block {
@@ -156,10 +156,10 @@
     &__item-number {
         display: flex;
         align-items: center;
-        margin-bottom: 11px;
+        margin-bottom: 0.573vw;
 
         img {
-            max-height: 32px;
+            max-height: 1.667vw;
         }
 
         p {
