@@ -2,6 +2,7 @@
     padding: 150px 0 124px;
     position: relative;
     z-index: 1000;
+    background-color: var(--color-white);
 
     &__title-first-element {
         font-size: 8.333vw;
@@ -115,16 +116,20 @@
         justify-content: space-between;
         align-items: center;
         background-color: transparent;
+        text-transform: uppercase;
+        height: 3.802vw;
         cursor: pointer;
         border: none;
         border-bottom: 1px solid var(--primary-color);
         height: 3.802vw;
-        color: var(--color-brand-ligth);
+        color: var(--primary-color);
         text-decoration: none;
+        transition: .5s ease-in-out;
 
         svg {
             width: 72px;
             height: 72px;
+            transition: .5s ease-in-out;
         }
          
         p {

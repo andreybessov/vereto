@@ -52,10 +52,10 @@ function Header() {
                             <a id="headerLink5" className="header__link" href="#form-section">Контакти</a>
                         </li>
                     </ul>
-                    <button className="header__button" type="button">
+                        <a className="header__button" href="#contact-email">
                         <span id="headerBtn">Почати партнерство</span> 
                         <Arrow className='header__small-arrow' width={40} height={40} />
-                    </button>
+                        </a>
                     <div className="header__lang-button">
                         <button id="btnUA" type="button" className="active">UA</button>
                         <p>|</p>

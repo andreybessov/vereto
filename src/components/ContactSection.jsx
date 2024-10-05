@@ -132,10 +132,10 @@ function ContactSection() {
       </div>
       <div className="contact-section__email-block">
         <div className="container">
-          <div className="contact-section__email-container">
+          <div id='contact-email' className="contact-section__email-container">
             <div className="contact-section__form-block" ref={formBlockRef}>
               {/* Форма отправки */}
-              <form id='form-section' className='form' autoComplete='off' onSubmit={handleSubmit}>
+              <form className='form' autoComplete='off' onSubmit={handleSubmit}>
                 <div className='form__name-container'>
                   <label className='form__label-name' htmlFor='contact-user-name'></label>
                   <input className='form__input-name' type="text" name='contact-user-name' required id='contact-user-name' placeholder="ІМ'Я" />

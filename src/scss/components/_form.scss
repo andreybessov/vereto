@@ -75,6 +75,12 @@
         width: 29.167vw;
         text-transform: uppercase;
         cursor: pointer;
+        transition: .5s ease-in-out;
+        height: 2.292vw;
+
+        svg {
+            transition: .5s ease-in-out;
+        }
 
         p {
             margin: 0;
@@ -84,7 +90,8 @@
             background-color: var(--color-brand-ligth);
             color: var(--color-white);
             border-bottom: none;
-            transition: background-color, color, .5s ease-in-out;
+            padding: 0 10px 0 16px;
+            transition: background-color, color, padding, .5s ease-in-out;
              
             svg {
                 transform: rotate(15deg);
