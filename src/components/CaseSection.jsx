@@ -102,7 +102,7 @@ function CaseSection() {
           </span>
           <span className="case-section__animation-text">
             <img src={divederLeft} alt="[" />
-            <p ref={textRef}></p> {/* Элемент с анимацией текста */}
+            <p ref={textRef}></p> 
             <img src={divederRight} alt="]" />
           </span>
         </div>

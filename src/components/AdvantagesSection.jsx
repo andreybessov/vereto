@@ -7,7 +7,6 @@ import teamCard2 from '../assets/team-card2.png';
 import teamCard3 from '../assets/team-card3.png';
 
 function AdvantagesSection() {
-    // Данные о членах команды и их цитатах
     const teamMembers = [
         {
             name: 'Яна Травка',

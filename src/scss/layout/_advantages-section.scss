@@ -18,6 +18,7 @@
         font-size: 1.458vw;
         font-weight: 500;
         color: var(--color-white);
+        width: 14.844vw;
     }
 
     &__span-container {
@@ -89,6 +90,7 @@
         font-size: 1.667vw;
         text-transform: uppercase;
         font-family: 'Manrope', sans-serif;
+        margin: 32px 0 12px;
     }
 
     &__card-text {
@@ -96,6 +98,7 @@
         font-size: 1.146vw;
         text-transform: uppercase;
         font-family: 'Manrope', sans-serif;
+        margin: 0 0 12px;
     }
 
     &__text-container {

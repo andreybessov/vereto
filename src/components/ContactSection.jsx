@@ -106,7 +106,7 @@ function ContactSection() {
 
           // Анимация формы после отправки
           gsap.to(formBlockRef.current, {
-            y: '100%', // Уезжает вниз
+            y: '100%', 
             duration: 1.5,
             ease: 'power3.inOut',
           });
@@ -152,7 +152,7 @@ function ContactSection() {
                   </div>
                   <div className="form__telegram">
                     <label htmlFor='contact-user-tg'></label>
-                    <input type="text" name='contact-user-tg' required id='contact-user-tg' placeholder="ВАШ TELEGRAM" />
+                    <input type="text" name='contact-user-tg' id='contact-user-tg' placeholder="ВАШ TELEGRAM" />
                   </div>
                 </div>
                 <div className='form__text-container'>

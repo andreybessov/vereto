@@ -32,9 +32,9 @@ function App() {
             </div>
       <AnimationSection isHovered={isHovered}/>
       <ProjectSection />
-      <PicassoSection/>
+      <PicassoSection />
       <CaseSection />
-      <AdvantagesSection/>
+      <AdvantagesSection />
       <ContactSection />
     </main>
       <Footer />
