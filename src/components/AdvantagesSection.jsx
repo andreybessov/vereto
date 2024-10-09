@@ -103,7 +103,7 @@ function AdvantagesSection() {
                             <article className="advantages-section__card">
                                 <img src={member.image} alt={member.name} />
                             </article>
-                            <h3 className="advantages-section__card-title">{member.name}</h3>
+                            <p className="advantages-section__card-title">{member.name}</p>
                             <p className="advantages-section__card-text">{member.role}</p>
                         </li>
                     ))}
