@@ -5,7 +5,11 @@
     transition: transform 0.3s ease-in-out;
     z-index: 1200;
     background: var(--color-white);
-    border-bottom: 1px solid black; 
+     border-bottom: none;
+
+    @media screen and (min-width:$bp-header) {
+        border-bottom: 1px solid black;
+    }
 
     &.no-border {
         border-bottom: none; 
@@ -22,6 +26,11 @@
         padding: 20px 0;
         width: 100%;
         justify-content: space-between;
+        border-bottom: 1px solid var( --color-footer);
+
+        @media screen and (min-width:$bp-header) {
+            border-bottom: none;
+        }
     }
 
     &__menu {

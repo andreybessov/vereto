@@ -13,6 +13,7 @@
         white-space: nowrap;
         font-weight: 400;
         position: relative;
+        margin-top: 12px;
 
         img {
             position: absolute;
@@ -24,6 +25,7 @@
         font-size: 8.333vw;
         font-weight: 500;
         position: relative;
+        margin-top: 0;
  
         img {
             top: 10%;
@@ -151,7 +153,7 @@
 
     &__text-paragraph {
         max-width: 262px;
-        margin: 32px 0 12px; 
+        margin: 32px 0 16px; 
         font-size: 4.167vw;
 
         @media screen and (min-width:$bp-mobile) {
@@ -185,17 +187,29 @@
             font-weight: 800;
             text-decoration: none;
             text-transform: uppercase;
-            color: var(--primary-color);
-            transition: .5s ease-in-out;
+            background: var(--color-brand-ligth);
+            color: var(--color-white);
+            padding: 0 0 0 15px;
 
             p {
                 margin: 0;
             }
-            
-            &:active {
-                background-color: var(--color-brand-dark);
-                color: var(--color-white)
+
+            path {
+                fill: var(--color-white);
             }
+            
+            path:nth-child(3){
+                fill: var(--primary-color);         
+                }
+            
+            path:nth-child(4){
+                fill: var(--primary-color);         
+                }
+            
+            path:nth-child(5){
+                fill: var(--primary-color);         
+                }
         }
 
         @media screen and (min-width:$bp-mobile) {

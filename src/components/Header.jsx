@@ -83,6 +83,7 @@ function Header() {
 
             {/* Мобильное меню вынесено за пределы хедера */}
             <div className={`mobile-menu ${isMenuOpen ? 'is-open' : ''}`}>
+                <div className="container">
                 <div className="mobile-menu__header">
                     <Logo className='header__logo'/>
                     <button 
@@ -97,6 +98,7 @@ function Header() {
                     <button id="btnUA" type="button" className="active">UA</button>
                     <p>|</p>
                     <button id="btnEN" type="button" className="default">EN</button>
+                </div>
                 </div>
                 <ul className='mobile-menu__list'>
                     <li>
