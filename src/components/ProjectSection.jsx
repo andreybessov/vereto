@@ -245,7 +245,11 @@ function ProjectSection() {
                         </span>
                     </button>
                 </div>
-                <a className='project-section__hero-button' href="#contact-email"><p>Почати партнерство</p><Arrow/></a>
+                <div className="project-section__hero-button">
+                        <a href='#contact-email'>
+                            <p>Почати партнерство</p><Arrow/>
+                        </a>
+                        </div>
             </div>
         </section>
     );

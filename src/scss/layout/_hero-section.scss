@@ -5,12 +5,23 @@
     background-color: var(--color-white);
 
     &__title-first-element {
+        font-size: 15.417vw;
+        white-space: nowrap;
+        font-weight: 400;
+        position: relative;
+
+        img {
+            position: absolute;
+            width: 6px;
+            height: 12px;
+        }
+
+        @media screen and (min-width:$bp-mobile) {
         font-size: 8.333vw;
         font-weight: 500;
         position: relative;
  
         img {
-            position: absolute;
             top: 10%;
             right: 0px;
         }
@@ -19,16 +30,21 @@
             color: var(--color-brand-ligth);
         }
     }
+}
 
     &__title-second-element {
         display: flex;
         align-items: center;
+        width: 61.25vw;
+        height: 32.5vw;
+        background: url(/src/assets/DO.svg) no-repeat center;
+        background-size: contain;
+        margin-top: 12px;
+
+        @media screen and (min-width:$bp-mobile) {
         // margin-bottom: 40px;
         width: 31vw;
         height: 16.1vw;
-        background: url(/src/assets/DO.svg) no-repeat center;
-        background-size: contain;
-        margin-top: 40px;
 
         p {
             margin: 0;
@@ -42,14 +58,22 @@
             width: 100%;
             height: 100%;
         }
-    } 
+
+    }
+} 
 
     &__title-third-element {
-        font-size: 5.208vw;
-        font-weight: 500;
+        font-size: 8.5vw;
         white-space: nowrap;
-        height: 100%;
-        max-height: 100px;
+        width: 100%;
+        margin-top: 12px;
+
+        @media screen and (min-width:$bp-mobile){
+            font-size: 5.208vw;
+            font-weight: 500;
+            height: 100%;
+            max-height: 100px;
+        }
     }
 
     // &__DO-element {
@@ -60,31 +84,53 @@
     &__diveder {
         width: 100%;
         height: 100%;
+        max-width: 7px;
+        max-height: 16px;
+
+        @media screen and (min-width:$bp-mobile) {
         max-height: 28px;
         max-width: 12px;
+        }
     }
 
     &__animation-text {
         display: flex;
         align-items: center;
-        gap: 12px;
         font-weight: 500;
-        font-size: 1.146vw;
+        font-size: 3.333vw;
         text-transform: uppercase;
         color: var(--button-default-color);
+        justify-content: flex-end;
+        gap: 8px;
+
+        @media screen and (min-width: $bp-mobile) {
+        gap: 12px;
+        font-size: 1.146vw;
+        justify-content: start;
+        }
 
         p {
             margin: 0;
+            white-space: nowrap;
         }
     }
 
     &__span-container {
-        display: flex;
+        &:first-child {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        @media screen and (min-width:$bp-mobile) {
+        &:first-child {    
+        flex-direction: row;
         gap: 32px;
+        }
 
         &:nth-child(2) {
             justify-content: space-between;
         }
+    }
     }
 
     &__text {
@@ -96,10 +142,16 @@
     }
 
     &__text-paragraph {
-        max-width: 444px;
-        margin: 96px 0 48px;
-        font-size: 1.458vw;
-        padding-left: 40px;
+        max-width: 262px;
+        margin: 32px 0 12px; 
+        font-size: 4.167vw;
+
+        @media screen and (min-width:$bp-mobile) {
+            max-width: 444px;
+            margin: 96px 0 48px;
+            font-size: 1.458vw;
+            padding-left: 40px;
+        }
 
         span {
             font-weight: 700;
@@ -110,7 +162,7 @@
         display: flex;
         align-items: flex-end;
         width: 100%;
-        height: 5.208vw;
+        height: 13.333vw;
         margin-top: 80px;
         padding: 0;
         border-bottom: 1px solid var(--primary-color);
@@ -122,7 +174,7 @@
             justify-content: space-between;
             align-items: center;
             height: max-content;
-            font-size: 1.875vw; 
+            font-size: 5vw; 
             font-weight: 800;
             text-decoration: none;
             text-transform: uppercase;
@@ -132,6 +184,18 @@
             p {
                 margin: 0;
             }
+            
+            &:active {
+                background-color: var(--color-brand-dark);
+                color: var(--color-white)
+            }
+        }
+
+        @media screen and (min-width:$bp-mobile) {
+        height: 5.208vw;
+
+        a {
+            font-size: 1.875vw; 
 
             svg {
                 height: 3.75vw;
@@ -173,6 +237,7 @@
                     color: var(--color-white)
                 }
         }
+    }
     }
 
     // &__button {

@@ -25,16 +25,23 @@
     }
 
     &__menu {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        font-size: 1.146vw;
-        gap: 48px;
-        margin: 0 0 0 10px;
-        padding: 0;
+        display: none;
+
+        @media screen and (min-width: $bp-header) {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            font-size: 1.146vw;
+            gap: 48px;
+            margin: 0 0 0 10px;
+            padding: 0;
+        }
     }
 
     &__button {
+        display: none;
+
+        @media screen and (min-width: $bp-header) {
         display: flex;
         gap: 32px;
         background-color: transparent;
@@ -65,9 +72,13 @@
         &:active {
             color: var(--color-brand-dark);
         }
+        }
     }
 
     &__lang-button {
+       display: none;
+
+       @media screen and (min-width: $bp-header) {
         display: flex;
 
         p {
@@ -102,6 +113,7 @@
                 }
             }
         }
+       }
     }
 
     &__link {
@@ -122,5 +134,20 @@
 
     &.hide {
         transform: translateY(-100%); /* Шапка скрыта */
+    }
+
+    &__burger-button {
+        display: inline-block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        
+        svg {
+            fill: var(--primary-color);
+        }
+
+        @media screen and (min-width: $bp-header) {
+            display: none;
+        }
     }
 }
