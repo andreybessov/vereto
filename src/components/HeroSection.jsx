@@ -5,22 +5,22 @@ import React, { useEffect } from 'react';
 import Typed from 'typed.js';
 import { ReactComponent as Arrow } from '../assets/arrow.svg';
 
+const optionsFirst = {
+    strings: ["чистого полотна"],
+    typeSpeed: 50,
+    backSpeed: 25,
+    showCursor: false,
+};
+
+const optionsSecond = {
+    strings: ["Vereto – це ваш новий початок"],
+    typeSpeed: 50,
+    backSpeed: 25,
+    showCursor: false,
+};
+
 function HeroSection() {
     useEffect(() => {
-        const optionsFirst = {
-            strings: ["чистого полотна"],
-            typeSpeed: 50,
-            backSpeed: 25,
-            showCursor: false
-        };
-
-        const optionsSecond = {
-            strings: ["Vereto – це ваш новий початок"],
-            typeSpeed: 50,
-            backSpeed: 25,
-            showCursor: false
-        };
-
         const typedFirst = new Typed("#typingTextFirst", optionsFirst);
         const typedSecond = new Typed("#typingTextSecond", optionsSecond);
 
