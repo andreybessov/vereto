@@ -218,12 +218,33 @@
 
         a {
             font-size: 1.875vw; 
+            background: transparent;
+            color: var(--primary-color);
+            padding: 0;
 
             svg {
                 height: 3.75vw;
                 width: 3.75vw;
                 transition: .5s ease-in-out;
             }
+
+            path {
+                fill: var(--primary-color);
+            }
+
+            path:nth-child(3){
+                fill: var(--color-brand-ligth);         
+                }
+            
+            path:nth-child(4){
+                fill: var(--color-brand-ligth);         
+                }
+            
+            path:nth-child(5){
+                fill: var(--color-brand-ligth);         
+                }
+            
+
         }
 
         &:hover {
@@ -239,18 +260,22 @@
                     transform: rotate(15deg);
                     transition: transform .5s ease-in-out;
                 }
+
+                path {
+                    fill: var(--color-white);
+                }
                 
                 
                 path:nth-child(3){
-                    fill: var(--color-white);         
+                    fill: var(--primary-color);         
                     }
                 
                 path:nth-child(4){
-                    fill: var(--color-white);         
+                    fill: var(--primary-color);         
                     }
                 
                 path:nth-child(5){
-                    fill: var(--color-white);         
+                    fill: var(--primary-color);         
                     }
                 }
                 
