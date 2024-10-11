@@ -174,7 +174,6 @@
         height: 13.333vw;
         margin-top: 72px;
         padding: 0;
-        border-bottom: 1px solid var(--primary-color);
         cursor: pointer;
 
         a {
@@ -215,6 +214,7 @@
         @media screen and (min-width:$bp-mobile) {
         height: 5.208vw;
         margin-top: 80px;
+        border-bottom: 1px solid var(--primary-color);
 
         a {
             font-size: 1.875vw; 
