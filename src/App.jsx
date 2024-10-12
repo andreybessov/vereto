@@ -27,10 +27,10 @@ function App() {
     <Header />
     <main>
       <HeroSection/>
-      {/* <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 <AboutSection />
             </div>
-      <AnimationSection isHovered={isHovered}/>
+      {/*<AnimationSection isHovered={isHovered}/>
       <ProjectSection />
       <PicassoSection />
       <CaseSection />
