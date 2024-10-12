@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vereto/static/css/main.a182112a.css",
-    "main.js": "/vereto/static/js/main.4aee0a5e.js",
+    "main.css": "/vereto/static/css/main.2bcc5fdc.css",
+    "main.js": "/vereto/static/js/main.ef52c705.js",
     "static/media/picasso.png": "/vereto/static/media/picasso.94e2f7514ff48a10292c.png",
     "static/media/img-case-1.png": "/vereto/static/media/img-case-1.0016b3533595bc0304d4.png",
     "static/media/card5.png": "/vereto/static/media/card5.42ac172497921a64e6f9.png",
@@ -19,6 +19,7 @@
     "static/media/mobile-menu-footer.svg": "/vereto/static/media/mobile-menu-footer.72bbc7497d43cc1c8037303fc1dfa662.svg",
     "static/media/pixel-block.svg": "/vereto/static/media/pixel-block.467ec388c4dd0ea1c8ba0e1664fcee0e.svg",
     "static/media/footer-logo.svg": "/vereto/static/media/footer-logo.72d28589c6eef4ebee67c86ed2f14dab.svg",
+    "static/media/mobile-pixel-block.svg": "/vereto/static/media/mobile-pixel-block.6889d2605b7182533e6c713fe90e8656.svg",
     "static/media/logo.svg": "/vereto/static/media/logo.adc298dc28b3bba4cfd337ca258738de.svg",
     "static/media/arrow.svg": "/vereto/static/media/arrow.cb80b73eee11927416eab24546286c47.svg",
     "static/media/gr3-el1.svg": "/vereto/static/media/gr3-el1.29cdc1a72404feed85448972d1abcef3.svg",
@@ -31,11 +32,11 @@
     "static/media/minus.svg": "/vereto/static/media/minus.bc7cf757452ec4edfd8043d6b84a688d.svg",
     "static/media/burger-menu.svg": "/vereto/static/media/burger-menu.b6e907107f50c9be80257e2f677a4a5f.svg",
     "static/media/plus.svg": "/vereto/static/media/plus.9ae672cbae332b3bf0cde1c8a7b6b9e0.svg",
-    "main.a182112a.css.map": "/vereto/static/css/main.a182112a.css.map",
-    "main.4aee0a5e.js.map": "/vereto/static/js/main.4aee0a5e.js.map"
+    "main.2bcc5fdc.css.map": "/vereto/static/css/main.2bcc5fdc.css.map",
+    "main.ef52c705.js.map": "/vereto/static/js/main.ef52c705.js.map"
   },
   "entrypoints": [
-    "static/css/main.a182112a.css",
-    "static/js/main.4aee0a5e.js"
+    "static/css/main.2bcc5fdc.css",
+    "static/js/main.ef52c705.js"
   ]
 }
