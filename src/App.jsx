@@ -30,8 +30,8 @@ function App() {
       <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 <AboutSection />
             </div>
-      {/*<AnimationSection isHovered={isHovered}/>
-      <ProjectSection />
+      <AnimationSection isHovered={isHovered}/>
+      {/*<ProjectSection />
       <PicassoSection />
       <CaseSection />
       <AdvantagesSection />
