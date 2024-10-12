@@ -121,7 +121,7 @@
     &__mobile-group1 {
         display: flex;
         align-items: flex-end;
-        justify-content: space-between;
+        justify-content: space-around;
 
         .block-pixel-mobile-gr1 {
             transform: rotate(9deg);
@@ -139,13 +139,13 @@
     &__mobile-group2 {
         display: flex;
         align-items: flex-end;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-top: -18px;
 
         .block-pixel-mobile-gr2 {
             transform: rotate(35deg);
-            width: 50vw;
-            height: 50vw;
+            width: 46vw;
+            height: 47vw;
         }
 
         .block-img-mobile-gr2 {
@@ -163,7 +163,7 @@
 
     &__mobile-group3 {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-right: 10px;
 
         .block-pixel-mobile-gr3 {
@@ -195,7 +195,7 @@
 
     &__mobile-group4 {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         .block-pixel-mobile-gr4 {
             width: 50vw;
