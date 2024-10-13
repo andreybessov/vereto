@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vereto/static/css/main.634119de.css",
-    "main.js": "/vereto/static/js/main.838e60f5.js",
+    "main.css": "/vereto/static/css/main.623ce303.css",
+    "main.js": "/vereto/static/js/main.69fc6221.js",
     "static/media/picasso.png": "/vereto/static/media/picasso.94e2f7514ff48a10292c.png",
     "static/media/img-case-1.png": "/vereto/static/media/img-case-1.0016b3533595bc0304d4.png",
     "static/media/card5.png": "/vereto/static/media/card5.42ac172497921a64e6f9.png",
@@ -17,6 +17,7 @@
     "static/media/gr3-el2.svg": "/vereto/static/media/gr3-el2.c483f0f0aabc8dc7511db5b5cd50e705.svg",
     "static/media/gr3-el4.svg": "/vereto/static/media/gr3-el4.69a83d488a16fb82162afe25cc1c9937.svg",
     "static/media/DO.svg": "/vereto/static/media/DO.991c090cd97f7e95b51e.svg",
+    "static/media/case-section-element.svg": "/vereto/static/media/case-section-element.a31a1b52d85cbe7c175841e292f5330d.svg",
     "static/media/mobile-menu-footer.svg": "/vereto/static/media/mobile-menu-footer.72bbc7497d43cc1c8037303fc1dfa662.svg",
     "static/media/pixel-block.svg": "/vereto/static/media/pixel-block.467ec388c4dd0ea1c8ba0e1664fcee0e.svg",
     "static/media/footer-logo.svg": "/vereto/static/media/footer-logo.72d28589c6eef4ebee67c86ed2f14dab.svg",
@@ -30,14 +31,14 @@
     "static/media/gr2-el4.svg": "/vereto/static/media/gr2-el4.db88c5a78b2345b0b3f89378e8329c8e.svg",
     "static/media/gr2-el3.svg": "/vereto/static/media/gr2-el3.159ff9b1720c8cfd4c9a18c0f5bb0f41.svg",
     "static/media/gr1-el2.svg": "/vereto/static/media/gr1-el2.8c06039eeeeeaed0d0bd0bebe964829b.svg",
-    "static/media/minus.svg": "/vereto/static/media/minus.bc7cf757452ec4edfd8043d6b84a688d.svg",
+    "static/media/minus.svg": "/vereto/static/media/minus.cdd71d4d5532d8bfddf9489a8b5e9bcd.svg",
+    "static/media/plus.svg": "/vereto/static/media/plus.5f6d87376ff7336c91a7a3e9ca572804.svg",
     "static/media/burger-menu.svg": "/vereto/static/media/burger-menu.b6e907107f50c9be80257e2f677a4a5f.svg",
-    "static/media/plus.svg": "/vereto/static/media/plus.9ae672cbae332b3bf0cde1c8a7b6b9e0.svg",
-    "main.634119de.css.map": "/vereto/static/css/main.634119de.css.map",
-    "main.838e60f5.js.map": "/vereto/static/js/main.838e60f5.js.map"
+    "main.623ce303.css.map": "/vereto/static/css/main.623ce303.css.map",
+    "main.69fc6221.js.map": "/vereto/static/js/main.69fc6221.js.map"
   },
   "entrypoints": [
-    "static/css/main.634119de.css",
-    "static/js/main.838e60f5.js"
+    "static/css/main.623ce303.css",
+    "static/js/main.69fc6221.js"
   ]
 }
