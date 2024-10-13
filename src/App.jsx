@@ -31,9 +31,9 @@ function App() {
                 <AboutSection />
             </div>
       <AnimationSection isHovered={isHovered}/>
-      {/*<ProjectSection />
+      <ProjectSection />
       <PicassoSection />
-      <CaseSection />
+      {/*<CaseSection />
       <AdvantagesSection />
       <ContactSection /> */}
     </main>
