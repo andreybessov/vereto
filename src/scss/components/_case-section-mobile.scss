@@ -1,0 +1,89 @@
+.case-section-mobile {
+    display: block;
+
+    @media screen and (min-width:$bp-mobile) {
+        display: none;
+    }
+
+    &__list {
+        margin: 80px 0 120px;
+        padding: 0;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__diveder {
+        width: 100%;
+        height: 100%;
+        max-width: 10px;
+        max-height: 24px;
+    }
+
+    &__card-number {
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+        gap: 8px;
+
+        p {
+            color: var(--button-default-color);
+        }
+    }
+
+    &__card {
+        border-bottom: 2px solid var(--primary-color);
+        margin-bottom: 60px;
+    }
+
+    &__card-title {
+        padding-bottom: 16px;
+        margin-top: 24px;
+
+        :first-child {
+            font-size: 24px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--primary-color)
+        }
+
+        :last-child {
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: var(--color-brand-ligth);
+        }
+    }
+
+    &__card-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__card-plus {
+        max-width: 24px;
+        max-height: 24px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+    }
+
+    &__button-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: var(--color-brand-ligth);
+        font-size: 4.167vw;
+        font-weight: 600;
+        margin: 24px 0 16px;
+        text-transform: uppercase;
+    }
+}

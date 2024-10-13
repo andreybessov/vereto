@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
+import CaseSectionMobile from './CaseSectionMobile';
 import divederLeft from '../assets/diveder-left.png';
 import divederRight from '../assets/diveder-right.png';
 import divederLeftColor from '../assets/about-diveder-left.png';
 import divederRightColor from '../assets/about-diveder-right.png';
+import mobileSvg from '../assets/case-section-element.svg'
 import caseImgHero from '../assets/img-case-1.png';
 import caseImg2 from '../assets/card2.png';
 import caseImg3 from '../assets/card3.png';
@@ -98,7 +100,7 @@ function CaseSection() {
         <div className="case-section__span-container">
           <span className="case-section__title">
             Наші кейси
-            <img src={spanElement} alt="," /> що
+            <img src={spanElement} alt="," /> <p>що</p>
           </span>
           <span className="case-section__animation-text">
             <img src={divederLeft} alt="[" />
@@ -106,6 +108,7 @@ function CaseSection() {
             <img src={divederRight} alt="]" />
           </span>
         </div>
+        <img src={mobileSvg} alt='what' className='case-section__mobile-element' />
         <span className="case-section__title-el2">вражають та продають</span>
         <div className="case-section__content-container">
           <div className="case-section__text-block">
@@ -142,6 +145,7 @@ function CaseSection() {
             </li>
           ))}
         </ul>
+        <CaseSectionMobile />
       </div>
     </section>
   );

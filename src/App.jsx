@@ -33,8 +33,8 @@ function App() {
       <AnimationSection isHovered={isHovered}/>
       <ProjectSection />
       <PicassoSection />
-      {/*<CaseSection />
-      <AdvantagesSection />
+      <CaseSection />
+      {/*<AdvantagesSection />
       <ContactSection /> */}
     </main>
       {/* <Footer /> */}
