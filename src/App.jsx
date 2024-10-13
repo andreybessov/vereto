@@ -34,8 +34,8 @@ function App() {
       <ProjectSection />
       <PicassoSection />
       <CaseSection />
-      {/*<AdvantagesSection />
-      <ContactSection /> */}
+      <AdvantagesSection />
+      {/*<ContactSection /> */}
     </main>
       {/* <Footer /> */}
     </div>
