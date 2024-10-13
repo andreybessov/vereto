@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/vereto/static/css/main.22043817.css",
-    "main.js": "/vereto/static/js/main.ef52c705.js",
+    "main.css": "/vereto/static/css/main.b9463f15.css",
+    "main.js": "/vereto/static/js/main.838e60f5.js",
     "static/media/picasso.png": "/vereto/static/media/picasso.94e2f7514ff48a10292c.png",
     "static/media/img-case-1.png": "/vereto/static/media/img-case-1.0016b3533595bc0304d4.png",
     "static/media/card5.png": "/vereto/static/media/card5.42ac172497921a64e6f9.png",
+    "static/media/mobile-picasso.png": "/vereto/static/media/mobile-picasso.f5a3b3688878826ffa9b.png",
     "static/media/card2.png": "/vereto/static/media/card2.18bba2622c7872da5c19.png",
     "static/media/team-card1.png": "/vereto/static/media/team-card1.f5cdf2d3e1f0a59e1b5e.png",
     "static/media/team-card2.png": "/vereto/static/media/team-card2.f5cdf2d3e1f0a59e1b5e.png",
@@ -32,11 +33,11 @@
     "static/media/minus.svg": "/vereto/static/media/minus.bc7cf757452ec4edfd8043d6b84a688d.svg",
     "static/media/burger-menu.svg": "/vereto/static/media/burger-menu.b6e907107f50c9be80257e2f677a4a5f.svg",
     "static/media/plus.svg": "/vereto/static/media/plus.9ae672cbae332b3bf0cde1c8a7b6b9e0.svg",
-    "main.22043817.css.map": "/vereto/static/css/main.22043817.css.map",
-    "main.ef52c705.js.map": "/vereto/static/js/main.ef52c705.js.map"
+    "main.b9463f15.css.map": "/vereto/static/css/main.b9463f15.css.map",
+    "main.838e60f5.js.map": "/vereto/static/js/main.838e60f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.22043817.css",
-    "static/js/main.ef52c705.js"
+    "static/css/main.b9463f15.css",
+    "static/js/main.838e60f5.js"
   ]
 }
