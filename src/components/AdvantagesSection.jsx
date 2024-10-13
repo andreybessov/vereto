@@ -117,12 +117,16 @@ function AdvantagesSection() {
                             <p id="advantagesTextAnimation"></p>
                             <img className="advantages-section__diveder" src={divederRightColor} alt="diveder-right" />
                         </span>
+
+                        {/* Текст цитаты для десктопной версии, помещаем span в container */}
+                        {!isMobile && (
+                            <span className="advantages-section__span-el">{activeMember.quoteFirstPart}</span>
+                        )}
                     </div>
 
-                    {/* Текст цитаты для десктопной версии */}
+                    {/* Текст цитаты для десктопной версии, который идет отдельно */}
                     {!isMobile && (
                         <>
-                            <span className="advantages-section__span-el">{activeMember.quoteFirstPart}</span>
                             <p className="advantages-section__text">{activeMember.quoteSecondPart}</p>
                         </>
                     )}
