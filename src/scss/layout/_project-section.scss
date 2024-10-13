@@ -235,6 +235,7 @@
         justify-content: space-between;
         font-size: 27px;
         font-weight: 600;
+        color: var(--primary-color);
 
         svg {
             width: 5vw;
@@ -267,6 +268,7 @@
     &__dropdown {
         font-size: 3.333vw;
         font-weight: 400;
+        color: var(--primary-color);
         margin: 0;
         overflow: hidden;
         height: 0;
