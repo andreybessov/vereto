@@ -1,0 +1,121 @@
+.mobile-form {
+    display: block;
+    @media screen and (min-width:$bp-mobile) {
+        display: none;
+    }
+
+    &__text-container {
+        background-color: var(--color-brand-ligth);
+        margin-top: -1px;
+    }
+
+    &__form-container {
+        background-color: var(--primary-color);
+        padding: 48px 0 120px;
+    }
+
+    &__input {
+        width: 100%;
+        padding-bottom: 24px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid var(--color-border-input);
+        margin-bottom: 24px;
+        color: var(--color-white);
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid var(--color-brand-ligth);
+        }
+    }
+
+    &__button {
+        background-color: var(--color-brand-ligth);
+        color: var(--color-white);
+        border: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+        font-family: 'Manrope', sans-serif;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 800;
+
+        svg {
+            transform: rotate(15deg);
+        }
+
+        path {
+            fill: var(--color-white);
+        }
+        
+        path:nth-child(3) {
+            fill: var(--primary-color);         
+        }
+
+        path:nth-child(4) {
+            fill: var(--primary-color);         
+        }
+
+        path:nth-child(5) {
+            fill: var(--primary-color);         
+        }
+    }
+
+    &__button-container {
+        margin-top: 60px;
+    }
+
+    &__text {
+        padding: 120px 0 58px;
+        font-family: 'Manrope', sans-serif;
+        font-size: 36px;
+        color: var(--color-white);
+    }
+
+    &__logo {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        padding-bottom: 16px;
+    }
+
+    &__message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--color-white);
+        color: var(--primary-color);
+        padding: 20px 40px;
+        border-radius: 10px;
+        text-align: center;
+        z-index: 999;
+        width: 90%;
+        max-width: 400px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &__close-button {
+        border: none;
+        background-color: var(--button-default-color);
+        color: var(--color-white);
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); 
+        z-index: 998; 
+    }
+}

@@ -35,9 +35,9 @@ function App() {
       <PicassoSection />
       <CaseSection />
       <AdvantagesSection />
-      {/*<ContactSection /> */}
+      <ContactSection />
     </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

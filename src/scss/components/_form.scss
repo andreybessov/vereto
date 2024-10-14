@@ -100,26 +100,23 @@
                 transform: rotate(15deg);
                 transition: transform .5s ease-in-out;
             }
-            // svg {
-            //     fill: blue;
-            // }
 
-            // svg path .path-icon {
-            //     fill: var(--primary-color);
-            // }
-
-
+            path {
+                fill: var(--color-white);
+            }
+            
+            
             path:nth-child(3){
-                fill: var(--color-white);         
-            }
-
+                fill: var(--primary-color);         
+                }
+            
             path:nth-child(4){
-                fill: var(--color-white);         
-            }
-
+                fill: var(--primary-color);         
+                }
+            
             path:nth-child(5){
-                fill: var(--color-white);         
-            }
+                fill: var(--primary-color);         
+                }
         }
 
         &:active {

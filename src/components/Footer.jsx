@@ -1,4 +1,5 @@
 import {ReactComponent as FooterLogo} from '../assets/footer-logo.svg'
+import {ReactComponent as MobileFooterLogo} from '../assets/footer-logo-mobile.svg'
 
 
 function Footer() {
@@ -39,7 +40,8 @@ function Footer() {
             </div>
             </div>
             <div className="footer__bg">
-                <FooterLogo />
+                <FooterLogo className='footer__logo'/>
+                <MobileFooterLogo  className='footer__logo-mb'/>
             </div>
         </footer>
     )
