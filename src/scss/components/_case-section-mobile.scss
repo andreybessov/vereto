@@ -36,10 +36,6 @@
     &__card {
         border-bottom: 2px solid var(--primary-color);
         margin-bottom: 60px;
-
-        &:last-child {
-            margin: 0;
-        }
     }
 
     &__card-title {
