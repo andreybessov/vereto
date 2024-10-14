@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vereto/static/css/main.e93126a5.css",
-    "main.js": "/vereto/static/js/main.cde159c0.js",
+    "main.css": "/vereto/static/css/main.ea0c52c2.css",
+    "main.js": "/vereto/static/js/main.f4b3fc97.js",
     "static/media/picasso.png": "/vereto/static/media/picasso.94e2f7514ff48a10292c.png",
     "static/media/img-case-1.png": "/vereto/static/media/img-case-1.0016b3533595bc0304d4.png",
     "static/media/card5.png": "/vereto/static/media/card5.42ac172497921a64e6f9.png",
@@ -22,9 +22,12 @@
     "static/media/slick.svg": "/vereto/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/vereto/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/pixel-block.svg": "/vereto/static/media/pixel-block.467ec388c4dd0ea1c8ba0e1664fcee0e.svg",
+    "static/media/footer-logo-mobile.svg": "/vereto/static/media/footer-logo-mobile.570f241058f2d067f931366394dd920a.svg",
     "static/media/footer-logo.svg": "/vereto/static/media/footer-logo.72d28589c6eef4ebee67c86ed2f14dab.svg",
     "static/media/slick.ttf": "/vereto/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/black-logo.svg": "/vereto/static/media/black-logo.2b9b7e311724cdd50a70e9541c5077c8.svg",
     "static/media/slick.woff": "/vereto/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/mobile-contact-pixel.svg": "/vereto/static/media/mobile-contact-pixel.4c50185e0ed39a9daeefeeaa6ec4b6b7.svg",
     "static/media/mobile-pixel-block.svg": "/vereto/static/media/mobile-pixel-block.6889d2605b7182533e6c713fe90e8656.svg",
     "static/media/logo.svg": "/vereto/static/media/logo.adc298dc28b3bba4cfd337ca258738de.svg",
     "static/media/arrow.svg": "/vereto/static/media/arrow.cb80b73eee11927416eab24546286c47.svg",
@@ -40,11 +43,11 @@
     "static/media/minus.svg": "/vereto/static/media/minus.cdd71d4d5532d8bfddf9489a8b5e9bcd.svg",
     "static/media/plus.svg": "/vereto/static/media/plus.5f6d87376ff7336c91a7a3e9ca572804.svg",
     "static/media/burger-menu.svg": "/vereto/static/media/burger-menu.b6e907107f50c9be80257e2f677a4a5f.svg",
-    "main.e93126a5.css.map": "/vereto/static/css/main.e93126a5.css.map",
-    "main.cde159c0.js.map": "/vereto/static/js/main.cde159c0.js.map"
+    "main.ea0c52c2.css.map": "/vereto/static/css/main.ea0c52c2.css.map",
+    "main.f4b3fc97.js.map": "/vereto/static/js/main.f4b3fc97.js.map"
   },
   "entrypoints": [
-    "static/css/main.e93126a5.css",
-    "static/js/main.cde159c0.js"
+    "static/css/main.ea0c52c2.css",
+    "static/js/main.f4b3fc97.js"
   ]
 }
