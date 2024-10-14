@@ -88,6 +88,7 @@
 
        @media screen and (min-width: $bp-header) {
         display: flex;
+        align-items: center;
 
         p {
             color: var(--button-default-color);
