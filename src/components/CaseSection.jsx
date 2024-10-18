@@ -110,6 +110,11 @@ function CaseSection() {
         </div>
         <img src={mobileSvg} alt='what' className='case-section__mobile-element' />
         <span className="case-section__title-el2">вражають та продають</span>
+        <span className="case-section__title-el2-mb">
+          <p>вражають</p>
+           <p>та</p>
+          <p>продають</p>
+          </span>
         <div className="case-section__content-container">
           <div className="case-section__text-block">
             <div className="case-section__text-content">

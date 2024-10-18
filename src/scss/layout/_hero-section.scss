@@ -220,6 +220,7 @@
             background: transparent;
             color: var(--primary-color);
             padding: 0;
+            transition: background, color, padding, .5s ease-in-out;
 
             svg {
                 height: 3.75vw;
@@ -253,7 +254,6 @@
                 background: var(--color-brand-ligth);
                 color: var(--color-white);
                 padding: 0 0 0 15px;
-                transition: background, color, padding, .5s ease-in-out;
 
                 svg {
                     transform: rotate(15deg);

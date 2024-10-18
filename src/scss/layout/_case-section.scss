@@ -31,6 +31,7 @@
 
             p {
                 display: block;
+                margin-left: 2vw;
             }
 
             img{
@@ -42,18 +43,28 @@
     }
 
     &__title-el2 {
-        display: flex;
-        flex-wrap: nowrap;
-        font-size: 7.5vw;
-        font-weight: 500;
-        margin-bottom: 60;
-        margin-top: 12px;
+        display: none;
 
         @media screen and (min-width:$bp-mobile) {
-            font-size: 5.208vw;
+            display: flex;
+            flex-wrap: nowrap;
+            font-size: 5.208vw;;
+            font-weight: 500;
             margin-bottom: 124px;
             margin-top: 0;
             justify-content: flex-end;
+        }
+    }
+
+    &__title-el2-mb {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 12px;
+        font-size: 8.182vw;
+
+        @media screen and (min-width:$bp-mobile) {
+            display: none;
         }
     }
     

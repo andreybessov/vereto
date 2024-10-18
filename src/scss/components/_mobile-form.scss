@@ -23,6 +23,10 @@
         margin-bottom: 24px;
         color: var(--color-white);
 
+        &::placeholder {
+            font-size: 4.545vw;
+        }
+
         &:focus {
             outline: none;
             border-bottom: 2px solid var(--color-brand-ligth);

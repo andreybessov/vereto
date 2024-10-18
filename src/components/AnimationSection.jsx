@@ -13,6 +13,7 @@ import {ReactComponent as Gr3El1} from "../assets/gr3-el1.svg";
 import {ReactComponent as Gr3El2} from "../assets/gr3-el2.svg";
 import {ReactComponent as Gr3El3} from "../assets/gr3-el3.svg";
 import {ReactComponent as Gr3El4} from "../assets/gr3-el4.svg";
+import AnimationSectionMobile from './AnimationSectionMobile';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,32 +131,7 @@ function AnimationSection({ isHovered }) {
                     <Gr3El4 className="animation-section__block-pixel gr3el4 " />
                 </div>
             </div>
-            <div className="animation-section__block-down-mobile">
-                <div className="container">
-                    <div className="animation-section__mobile-group1">
-                        <Gr1El1 className="block-pixel-mobile-gr1" />
-                        <Gr1El2 className="block-img-mobile-gr1" />
-                    </div>
-                    <div className="animation-section__mobile-group2">
-                        <Gr2El4 className="block-img-mobile-gr2" />
-                        <Gr2El1 className="block-pixel-mobile-gr2" />
-                    </div>
-                    <div className="animation-section__mobile-group3">
-                        <Gr3El2 className="block-pixel-mobile-gr3" />
-                        <div className="animation-section__block-img-gr3-container">
-                        <Gr3El3 className="block-img-mobile-gr3" />
-                        <Gr2El3 className="block-img-mobile-gr3" />
-                        </div>
-                    </div>
-                    <div className="animation-section__mobile-group4">
-                        <div className="animation-section__block-img-gr4-container">
-                        <Gr3El3 className="block-img-mobile-gr4" />
-                        <Gr3El1 className="block-img-mobile-gr4" />
-                        </div>
-                        <Gr3El4 className="block-pixel-mobile-gr4" />
-                    </div>
-                    </div>
-            </div>
+            <AnimationSectionMobile />
         </section>
     );
 }
