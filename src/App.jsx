@@ -26,7 +26,7 @@ function App() {
     <Header />
     <main>
       <HeroSection/>
-      {/* <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 <AboutSection />
             </div>
       <AnimationSection isHovered={isHovered}/>
@@ -34,9 +34,9 @@ function App() {
       <PicassoSection />
       <CaseSection />
       <AdvantagesSection />
-      <ContactSection /> */}
+      <ContactSection />
     </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
