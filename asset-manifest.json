@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vereto/static/css/main.87580696.css",
-    "main.js": "/vereto/static/js/main.1bf9a0eb.js",
+    "main.css": "/vereto/static/css/main.697c627c.css",
+    "main.js": "/vereto/static/js/main.fbb5c6e3.js",
     "static/media/picasso.png": "/vereto/static/media/picasso.94e2f7514ff48a10292c.png",
     "static/media/img-case-1.png": "/vereto/static/media/img-case-1.0016b3533595bc0304d4.png",
     "static/media/card5.png": "/vereto/static/media/card5.42ac172497921a64e6f9.png",
@@ -10,6 +10,7 @@
     "static/media/team-card1.png": "/vereto/static/media/team-card1.f5cdf2d3e1f0a59e1b5e.png",
     "static/media/team-card2.png": "/vereto/static/media/team-card2.f5cdf2d3e1f0a59e1b5e.png",
     "static/media/team-card3.png": "/vereto/static/media/team-card3.f5cdf2d3e1f0a59e1b5e.png",
+    "static/media/Manrope-VariableFont_wght.ttf": "/vereto/static/media/Manrope-VariableFont_wght.4afb283bba326df875f6.ttf",
     "static/media/card4.png": "/vereto/static/media/card4.77417b29ae6e5eb53e97.png",
     "static/media/card3.png": "/vereto/static/media/card3.f580bfb555ba2dc3fdf6.png",
     "static/media/gr1-el1.svg": "/vereto/static/media/gr1-el1.2ac51368d3ff47c81419afe0a4f679bc.svg",
@@ -53,11 +54,11 @@
     "static/media/minus.svg": "/vereto/static/media/minus.ce4283b6aa75e163c2bf10f8a4f5d908.svg",
     "static/media/plus.svg": "/vereto/static/media/plus.759d03f37398a8a4665d1d8c001f04b5.svg",
     "static/media/burger-menu.svg": "/vereto/static/media/burger-menu.b6e907107f50c9be80257e2f677a4a5f.svg",
-    "main.87580696.css.map": "/vereto/static/css/main.87580696.css.map",
-    "main.1bf9a0eb.js.map": "/vereto/static/js/main.1bf9a0eb.js.map"
+    "main.697c627c.css.map": "/vereto/static/css/main.697c627c.css.map",
+    "main.fbb5c6e3.js.map": "/vereto/static/js/main.fbb5c6e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.87580696.css",
-    "static/js/main.1bf9a0eb.js"
+    "static/css/main.697c627c.css",
+    "static/js/main.fbb5c6e3.js"
   ]
 }
