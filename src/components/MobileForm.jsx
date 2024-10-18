@@ -62,7 +62,7 @@ function MobileForm() {
         <div className="mobile-form">
             <div className="mobile-form__text-container">
                 <div className="container">
-                    <p className="mobile-form__text">Заповнення <br/>цієї форми не зобов’язує вас починати співпрацю з нами. Це лише перший крок до можливого партнерства.</p>
+                    <p className="mobile-form__text"><span><p>Заповнення</p> цієї форми не зобов’язує ваc починати співпрацю з нами.</span> Це лише перший крок до можливого партнерства.</p>
                     <div className="mobile-form__logo">
                         <BlackLogo />
                     </div>

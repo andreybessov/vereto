@@ -77,6 +77,15 @@
         font-family: 'Manrope', sans-serif;
         font-size: 36px;
         color: var(--color-white);
+        text-align: justify;
+
+        p {
+            text-align: center;
+        }
+
+        span {
+            color: var(--color-span-mobile);
+        }
     }
 
     &__logo {
