@@ -22,21 +22,21 @@ function App() {
   };
 
   return (
-    <div className="content">
-      <Header />
-      <main>
-        <HeroSection />
-        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <AboutSection />
-        </div>
-        <AnimationSection isHovered={isHovered} />
-        <ProjectSection />
-        <PicassoSection />
-        <CaseSection />
-        <AdvantagesSection />
-        <ContactSection />
-      </main>
-      <Footer />
+    <div className='content'>
+    <Header />
+    <main>
+      <HeroSection/>
+      {/* <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                <AboutSection />
+            </div>
+      <AnimationSection isHovered={isHovered}/>
+      <ProjectSection />
+      <PicassoSection />
+      <CaseSection />
+      <AdvantagesSection />
+      <ContactSection /> */}
+    </main>
+      {/* <Footer /> */}
     </div>
   );
 }

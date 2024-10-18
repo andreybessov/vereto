@@ -9,27 +9,70 @@
         max-height: 11.198vw;
     }
 
+    &__block-down {
+        display: none;
+
+        @media screen and (min-width:$bp-mobile) {
+            display: block;
+        }
+    }
+
+    &__block-down-mobile {
+        display: block;
+
+        @media screen and (min-width:$bp-mobile) {
+            display: none;
+        }
+    }
+
     &__block-container {
         max-height: 502px;
         height: 100%;
         background-color: var(--color-brand-ligth);
         position: relative;
+        margin-top: -1px;
     }
 
     &__pixel {
+        display: none;
+
+        @media screen and (min-width:$bp-mobile) {
+        display: block;
         position: relative;
         z-index: 101;
+        }
     }
+
+    &__pixel-mobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        @media screen and (min-width:$bp-mobile) {
+            display: none;
+        }
+    }
+
     
 
     &__block-pixel {
-        width: 25.573vw;
-        height: 26.979vw;
+        width: 240px;
+        height: 240px;
+
+        @media screen and (min-width: $bp-mobile) {
+            width: 25.573vw;
+            height: 26.979vw;
+        }
     }
 
     &__block-img {
+        width: 19.375vw;
+        height: 19.375vw;
+
+        @media screen and (min-width: $bp-mobile) {
         width: 11.25vw;
         height: 11.25vw;
+        }
     }
 
     &__group1 {

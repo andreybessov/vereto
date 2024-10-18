@@ -10,7 +10,7 @@ function AboutSection() {
 
     useEffect(() => {
         const options = {
-            strings: ["Чому ми?"],
+            strings: ["ЧОМУ МИ?"],
             typeSpeed: 50,
             backSpeed: 25,
             showCursor: false,

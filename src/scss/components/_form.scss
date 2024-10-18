@@ -5,7 +5,7 @@
         border: none;
         border-bottom: 1px solid black;
         background: transparent;
-        padding: 16px;
+        padding: 16px 0;
         outline: none;
         font-size: 1.146vw;
     }
@@ -21,7 +21,7 @@
             border: none;
             border-bottom: 1px solid black;
             background: transparent;
-            padding: 16px;
+            padding: 16px 0;
             outline: none;
             font-size: 1.146vw;
         }
@@ -52,7 +52,7 @@
         border: none;
         border-bottom: 1px solid black;
         background: transparent;
-        padding: 16px;
+        padding: 16px 0;
         outline: none;
         font-size: 1.146vw;
     }
@@ -100,26 +100,23 @@
                 transform: rotate(15deg);
                 transition: transform .5s ease-in-out;
             }
-            // svg {
-            //     fill: blue;
-            // }
 
-            // svg path .path-icon {
-            //     fill: var(--primary-color);
-            // }
-
-
+            path {
+                fill: var(--color-white);
+            }
+            
+            
             path:nth-child(3){
-                fill: var(--color-white);         
-            }
-
+                fill: var(--primary-color);         
+                }
+            
             path:nth-child(4){
-                fill: var(--color-white);         
-            }
-
+                fill: var(--primary-color);         
+                }
+            
             path:nth-child(5){
-                fill: var(--color-white);         
-            }
+                fill: var(--primary-color);         
+                }
         }
 
         &:active {

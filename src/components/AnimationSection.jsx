@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ReactComponent as Pixel } from "../assets/pixel-block.svg";
+import {ReactComponent as PixelMobile} from "../assets/mobile-pixel-block.svg"
 import {ReactComponent as Gr1El1} from "../assets/gr1-el1.svg";
 import {ReactComponent as Gr1El2} from "../assets/gr1-el2.svg";
 import {ReactComponent as Gr2El1} from "../assets/gr2-el1.svg";
@@ -12,6 +13,7 @@ import {ReactComponent as Gr3El1} from "../assets/gr3-el1.svg";
 import {ReactComponent as Gr3El2} from "../assets/gr3-el2.svg";
 import {ReactComponent as Gr3El3} from "../assets/gr3-el3.svg";
 import {ReactComponent as Gr3El4} from "../assets/gr3-el4.svg";
+import AnimationSectionMobile from './AnimationSectionMobile';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -109,6 +111,7 @@ function AnimationSection({ isHovered }) {
         <section className="animation-section" ref={sectionRef}>
             <div className="animation-section__block-container" ref={pixelContainerRef}>
                 <Pixel className="animation-section__pixel" />
+                <PixelMobile className="animation-section__pixel-mobile" />
             </div>
             <div className="animation-section__block-down" ref={blockDownRef}>
                 <div className="animation-section__group1">
@@ -128,6 +131,7 @@ function AnimationSection({ isHovered }) {
                     <Gr3El4 className="animation-section__block-pixel gr3el4 " />
                 </div>
             </div>
+            <AnimationSectionMobile />
         </section>
     );
 }

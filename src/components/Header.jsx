@@ -35,6 +35,17 @@ function Header() {
         setIsMenuOpen(!isMenuOpen); // Переключаем состояние меню
     };
 
+    const handleLinkClick = (target) => {
+        // Закрываем меню
+        setIsMenuOpen(false);
+
+        // Прокручиваем страницу к нужной секции
+        const section = document.querySelector(target);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             {/* Хедер */}
@@ -102,19 +113,19 @@ function Header() {
                 </div>
                 <ul className='mobile-menu__list'>
                     <li>
-                        <a className='mobile-menu__link' href="#">Про нас</a>
+                        <a className='mobile-menu__link' href="#about-section" onClick={() => handleLinkClick('#about-section')}>Про нас</a>
                     </li>
                     <li>
-                        <a className='mobile-menu__link' href="#">Послуги</a>
+                        <a className='mobile-menu__link' href="#project-section" onClick={() => handleLinkClick('#project-section')}>Послуги</a>
                     </li>
                     <li>
-                        <a className='mobile-menu__link' href="#">Кейси</a>
+                        <a className='mobile-menu__link' href="#case-section" onClick={() => handleLinkClick('#case-section')}>Кейси</a>
                     </li>
                     <li>
-                        <a className='mobile-menu__link' href="#">Команда</a>
+                        <a className='mobile-menu__link' href="#advantages-section" onClick={() => handleLinkClick('#advantages-section')}>Команда</a>
                     </li>
                     <li>
-                        <a className='mobile-menu__link' href="#">Контакти</a>
+                        <a className='mobile-menu__link' href="#contact-email" onClick={() => handleLinkClick('#contact-email')}>Контакти</a>
                     </li>
                 </ul>
 
@@ -125,4 +136,3 @@ function Header() {
 }
 
 export default Header;
-

@@ -71,6 +71,11 @@ function ProjectSection() {
                         <span className="project-section__title-el3">
                             реалізує VERETO? <span><img src={apostrophe} alt="'" /></span>
                         </span>
+                        <span className='project-section__title-el3-mb'>
+                            <p>реалізує</p>
+                            <p>VERETO?</p>
+                        </span>
+                        <span><img src={apostrophe} alt="'" /></span>
                     </div>
                 </div>
 

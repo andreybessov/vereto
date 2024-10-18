@@ -1,13 +1,22 @@
 .advantages-section {
     background-color: var(--primary-color);
     color: var(--button-default-color);
-    padding: 64px 0 164px;
+    padding: 60px 0 120px;
+
+    @media screen and (min-width:$bp-mobile) {
+        padding: 64px 0 164px;
+    }
 
     &__diveder{
         width: 100%;
         height: 100%;
-        max-height: 36px;
-        max-width: 16px;
+        max-height: 16px;
+        max-width: 7px;
+
+        @media screen and (min-width:$bp-mobile) {
+            max-height: 36px;
+            max-width: 16px;
+        }
     }
 
     &__text-animation {
@@ -15,10 +24,14 @@
         align-items: center;
         gap: 16px;
         text-transform: uppercase;
-        font-size: 1.458vw;
+        font-size: 3.333vw;
         font-weight: 500;
         color: var(--color-white);
         width: 14.844vw;
+
+        @media screen and (min-width:$bp-mobile) {
+            font-size: 1.458vw;
+        }
     }
 
     &__span-container {
@@ -36,18 +49,26 @@
 
     &__span-el {
         font-weight: 500;
-        font-size: 3.125vw;
+        font-size: 4.167vw;
+
+        @media screen and (min-width:$bp-mobile) {
+            font-size: 3.125vw;
+        }
     }
 
     &__text {
         font-weight: 500;
-        font-size: 3.333vw;
+        font-size: 4.167vw;
         margin: 0;
 
         span {
             font-weight: 700;
             font-size: 3.333vw;
             color: var(--color-brand-ligth);
+        }
+
+        @media screen and (min-width:$bp-mobile) {
+            font-size: 3.333vw;
         }
     }
 
@@ -87,23 +108,62 @@
 
     &__card-title {
         font-weight: 600;
-        font-size: 1.667vw;
+        font-size: 5;
         text-transform: uppercase;
         font-family: 'Manrope', sans-serif;
-        margin: 32px 0 12px;
+        margin: 16px 0 8px;
+        color: var(--color-white);
+
+        @media screen and (min-width:$bp-mobile) {
+            font-size: 1.667vw;
+            margin: 32px 0 0;
+            color: var(--button-default-color);
+        }
     }
 
     &__card-text {
         font-weight: 400;
-        font-size: 1.146vw;
+        font-size: 3.333vw;
         text-transform: uppercase;
         font-family: 'Manrope', sans-serif;
         margin: 0 0 12px;
+
+        @media screen and (min-width:$bp-mobile) {
+            font-size: 1.146vw;
+        }
     }
 
     &__text-container {
         height: 22.865vw;
     }
+
+    &__image {
+        max-width: 409px;
+        background: var(--color-white) url(/src/assets/Logo-team.png) no-repeat;
+        background-size: contain;
+    }
+
+    &__button-prev {
+        background-color: transparent;
+        border: none;
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        
+        :first-child,
+        :last-child {
+            background-color: transparent;
+            border: none;
+        }
+        
+    }
+
+    &__highlighted-text {
+        color: var(--color-border-input);
+    }
+
 }
 
 .active {

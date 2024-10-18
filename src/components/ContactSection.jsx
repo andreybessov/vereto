@@ -6,6 +6,8 @@ import { ReactComponent as Logo } from '../assets/logo.svg';
 import divederLeft from '../assets/diveder-left.png';
 import divederRight from '../assets/diveder-right.png';
 import { ReactComponent as Arrow } from '../assets/arrow.svg';
+import {ReactComponent as MobilePixel} from '../assets/mobile-contact-pixel.svg'
+import MobileForm from './MobileForm';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -128,7 +130,8 @@ function ContactSection() {
   return (
     <section id='contact-section' className='contact-section' ref={sectionRef}>
       <div className="contact-section__pixel-block" ref={pixelContainerRef}>
-        <Pixel />
+        <Pixel className='contact-section__pixel'/>
+        <MobilePixel className='contact-section__pixel-mobile'/>
       </div>
       <div className="contact-section__email-block">
         <div className="container">
@@ -189,6 +192,7 @@ function ContactSection() {
           </div>
         </>
       )}
+      <MobileForm/>
     </section>
   );
 }
