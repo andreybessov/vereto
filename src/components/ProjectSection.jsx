@@ -11,7 +11,16 @@ import apostrophe from '../assets/ʼ.png';
 function ProjectSection() {
     const typingElementRef = useRef(null);
     const typedInstanceRef = useRef(null);
-    const [animationStarted, setAnimationStarted] = useState(false); // Стейт для отслеживания запуска анимации
+    const [animationStarted, setAnimationStarted] = useState(false); 
+    const infoArr = [
+        {index: 0, number: '01', title: 'WEB ДИЗАЙН', element1: 'LANDING PAGE', element2: 'ПОРТФОЛІО', element3: 'ПРОМО-САЙТ', element4: 'САЙТ ДЛЯ ІВЕНТІВ'},
+        {index: 1, number: '02', title: 'UX/UI ДИЗАЙН', element1: 'КОРПОРАТИВНИЙ САЙТ', element2: 'ONLINE МАГАЗИН', element3: 'МАРКЕТПЛЕЙС', element4: 'SAAS'},
+        {index: 2, number: '03', title: 'BRANDING', element1: 'ФІРМОВИЙ СТИЛЬ', element2: 'ЛОГОТИП', element3: 'БРЕНДБУК', element4: 'АЙДЕНТИКА'},
+        {index: 3, number: '04', title: 'SOCIAL MEDIA', element1: 'СОЦІАЛЬНІ МЕРЕЖІ', element2: 'КОНТЕНТ-МАРКЕТИНГ', element3: 'SMO', element4: 'МЕНЕДЖМЕНТ'},
+        {index: 4, number: '05', title: 'МЕРЧ', element1: 'ОДЯГ', element2: 'АКСЕСУАРИ', element3: 'ПОЛІГРАФІЯ', element4: 'БРЕНДОВАНА ПРОДУКЦІЯ'},
+        {index: 5, number: '06', title: 'MAINTENANCE', element1: 'ТЕХНІЧНА ПІДТРИМКА', element2: 'КОНСУЛЬТАЦІЇ', element3: 'ОНОВЛЕННЯ', element4: 'БЕКАП'}
+    ]
+
 
     useEffect(() => {
         const options = {
@@ -79,177 +88,36 @@ function ProjectSection() {
                     </div>
                 </div>
 
-                <div className="project-section__button-container">
-                    <button
-                        className={`project-section__button ${activeIndex === 0 ? 'active' : ''}`}
-                        onClick={() => handleToggle(0)}
-                    >
-                        <span className="project-section__button-span1">
-                            <img className="project-section__diveder" src={divederLeft} alt="[" />
-                            <p>01</p>
-                            <img className="project-section__diveder" src={divederRight} alt="}" />
-                        </span>
-                        <span className="project-section__button-span2">
-                            <p className='project-section__button-title'>WEB ДИЗАЙН {activeIndex === 0 ? <Minus /> : <Plus />}</p>
-                            <motion.div
-                                className="project-section__dropdown"
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={activeIndex === 0 ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-                                exit={{ height: 0, opacity: 0 }} // Анимация закрытия
-                                transition={{ duration: 0.5 }}
-                                layout // Добавили layout для плавного изменения высоты
-                                style={{ overflow: 'hidden' }}
-                            >
-                                <p>LANDING PAGE</p>
-                                <p>ПОРТФОЛІО</p>
-                                <p>ПРОМО-САЙТ</p>
-                                <p>САЙТ ДЛЯ ІВЕНТІВ</p>
-                            </motion.div>
-                        </span>
-                    </button>
+                    {infoArr.map(item => (
+                        <div className="project-section__button-container">
+                        <button className={`project-section__button ${activeIndex === item.index ? 'active' : ''}`}
+                        onClick={() => handleToggle(item.index)}>
 
-                    <button
-                        className={`project-section__button ${activeIndex === 1 ? 'active' : ''}`}
-                        onClick={() => handleToggle(1)}
-                    >
                         <span className="project-section__button-span1">
                             <img className="project-section__diveder" src={divederLeft} alt="[" />
-                            <p>02</p>
+                            <p>{item.number}</p>
                             <img className="project-section__diveder" src={divederRight} alt="}" />
-                        </span>
-                        <span className="project-section__button-span2">
-                            <p className='project-section__button-title'>UX/UI ДИЗАЙН {activeIndex === 1 ? <Minus /> : <Plus />}</p>
+                    </span>
+                    <span className="project-section__button-span2">
+                            <p className='project-section__button-title'>{item.title} {activeIndex === item.index ? <Minus /> : <Plus />}</p>
                             <motion.div
                                 className="project-section__dropdown"
                                 initial={{ height: 0, opacity: 0 }}
-                                animate={activeIndex === 1 ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-                                exit={{ height: 0, opacity: 0 }} // Анимация закрытия
+                                animate={activeIndex === item.index ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+                                exit={{ height: 0, opacity: 0 }} 
                                 transition={{ duration: 0.5 }}
-                                layout // Добавили layout для плавного изменения высоты
+                                layout 
                                 style={{ overflow: 'hidden' }}
                             >
-                                <p>КОРПОРАТИВНИЙ САЙТ</p>
-                                <p>ONLINE МАГАЗИН</p>
-                                <p>МАРКЕТПЛЕЙС</p>
-                                <p>CRM СИСТЕМИ</p>
-                                <p>FINTECH</p>
-                                <p>SAAS</p>
+                                <p>{item.element1}</p>
+                                <p>{item.element2}</p>
+                                <p>{item.element3}</p>
+                                <p>{item.element4}</p>
                             </motion.div>
                         </span>
                     </button>
-
-                    <button
-                        className={`project-section__button ${activeIndex === 2 ? 'active' : ''}`}
-                        onClick={() => handleToggle(2)}
-                    >
-                        <span className="project-section__button-span1">
-                            <img className="project-section__diveder" src={divederLeft} alt="[" />
-                            <p>03</p>
-                            <img className="project-section__diveder" src={divederRight} alt="}" />
-                        </span>
-                        <span className="project-section__button-span2">
-                            <p className='project-section__button-title'>BRANDING {activeIndex === 2 ? <Minus /> : <Plus />}</p>
-                            <motion.div
-                                className="project-section__dropdown"
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={activeIndex === 2 ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-                                exit={{ height: 0, opacity: 0 }} // Анимация закрытия
-                                transition={{ duration: 0.5 }}
-                                layout // Добавили layout для плавного изменения высоты
-                                style={{ overflow: 'hidden' }}
-                            >
-                                <p>ФІРМОВИЙ СТИЛЬ</p>
-                                <p>ЛОГОТИП</p>
-                                <p>БРЕНДБУК</p>
-                                <p>АЙДЕНТИКА</p>
-                            </motion.div>
-                        </span>
-                    </button>
-
-                    <button
-                        className={`project-section__button ${activeIndex === 3 ? 'active' : ''}`}
-                        onClick={() => handleToggle(3)}
-                    >
-                        <span className="project-section__button-span1">
-                            <img className="project-section__diveder" src={divederLeft} alt="[" />
-                            <p>04</p>
-                            <img className="project-section__diveder" src={divederRight} alt="}" />
-                        </span>
-                        <span className="project-section__button-span2">
-                            <p className='project-section__button-title'>SOCIAL MEDIA {activeIndex === 3 ? <Minus /> : <Plus />}</p>
-                            <motion.div
-                                className="project-section__dropdown"
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={activeIndex === 3 ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-                                exit={{ height: 0, opacity: 0 }} // Анимация закрытия
-                                transition={{ duration: 0.5 }}
-                                layout // Добавили layout для плавного изменения высоты
-                                style={{ overflow: 'hidden' }}
-                            >
-                                <p>СОЦІАЛЬНІ МЕРЕЖІ</p>
-                                <p>КОНТЕНТ-МАРКЕТИНГ</p>
-                                <p>SMO</p>
-                                <p>МЕНЕДЖМЕНТ</p>
-                            </motion.div>
-                        </span>
-                    </button>
-
-                    <button
-                        className={`project-section__button ${activeIndex === 4 ? 'active' : ''}`}
-                        onClick={() => handleToggle(4)}
-                    >
-                        <span className="project-section__button-span1">
-                            <img className="project-section__diveder" src={divederLeft} alt="[" />
-                            <p>05</p>
-                            <img className="project-section__diveder" src={divederRight} alt="}" />
-                        </span>
-                        <span className="project-section__button-span2">
-                            <p className='project-section__button-title'>МЕРЧ {activeIndex === 4 ? <Minus /> : <Plus />}</p>
-                            <motion.div
-                                className="project-section__dropdown"
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={activeIndex === 4 ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-                                exit={{ height: 0, opacity: 0 }} // Анимация закрытия
-                                transition={{ duration: 0.5 }}
-                                layout // Добавили layout для плавного изменения высоты
-                                style={{ overflow: 'hidden' }}
-                            >
-                                <p>ОДЯГ</p>
-                                <p>АКСЕСУАРИ</p>
-                                <p>ПОЛІГРАФІЯ</p>
-                                <p>БРЕНДОВАНА ПРОДУКЦІЯ</p>
-                            </motion.div>
-                        </span>
-                    </button>
-
-                    <button
-                        className={`project-section__button ${activeIndex === 5 ? 'active' : ''}`}
-                        onClick={() => handleToggle(5)}
-                    >
-                        <span className="project-section__button-span1">
-                            <img className="project-section__diveder" src={divederLeft} alt="[" />
-                            <p>06</p>
-                            <img className="project-section__diveder" src={divederRight} alt="}" />
-                        </span>
-                        <span className="project-section__button-span2">
-                            <p className='project-section__button-title'>MAINTENANCE {activeIndex === 5 ? <Minus /> : <Plus />}</p>
-                            <motion.div
-                                className="project-section__dropdown"
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={activeIndex === 5 ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-                                exit={{ height: 0, opacity: 0 }} // Анимация закрытия
-                                transition={{ duration: 0.5 }}
-                                layout // Добавили layout для плавного изменения высоты
-                                style={{ overflow: 'hidden' }}
-                            >
-                                <p>ТЕХНІЧНА ПІДТРИМКА</p>
-                                <p>КОНСУЛЬТАЦІЇ</p>
-                                <p>ОНОВЛЕННЯ</p>
-                                <p>БЕКАП</p>
-                            </motion.div>
-                        </span>
-                    </button>
-                </div>
+                    </div>
+                     ))}
                 <div className="project-section__hero-button">
                         <a className='project-section__mobile-button' href='#contact-email'>
                             <p>Почати партнерство</p><Arrow/>

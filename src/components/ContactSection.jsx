@@ -75,7 +75,6 @@ function ContactSection() {
     const userTelegram = event.target['contact-user-tg'].value;
     const userMessage = event.target['contact-user-text'].value;
 
-    // Формируем сообщение для Telegram
     const message = `
       Ім'я: ${userName}\n
       Email: ${userEmail}\n
@@ -83,7 +82,6 @@ function ContactSection() {
       Повідомлення: ${userMessage}
     `;
 
-    // Отправляем сообщение в Telegram чат через бота
     const chatId = '-1002178182822';
     const botToken = '7387426420:AAEf3GE0-pYfXeWtTZBkF3BgQQ9Hup_GTKs';
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;

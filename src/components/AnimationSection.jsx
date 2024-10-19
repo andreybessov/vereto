@@ -22,7 +22,6 @@ function AnimationSection({ isHovered }) {
     const pixelContainerRef = useRef(null);
     const blockDownRef = useRef(null);
 
-    // Анимация падения
     const animateBlocks = () => {
         const group3 = blockDownRef.current.querySelector('.animation-section__group3');
         const group2 = blockDownRef.current.querySelector('.animation-section__group2');
@@ -32,10 +31,8 @@ function AnimationSection({ isHovered }) {
         gsap.set(".rt2", { rotation: 35 });
         gsap.set(".rt3", { rotation: 15 })
 
-        // Временно смещаем блоки вверх (y: -1000) относительно их исходного положения
         gsap.set([group3.children, group2.children, group1.children], { y: -1000, opacity: 0});
 
-        // Падение для группы 3
         gsap.to(group3.children, {
             y: 0, 
             opacity: 1,
@@ -44,28 +41,25 @@ function AnimationSection({ isHovered }) {
             stagger: 0.3 
         });
 
-        // Падение для группы 2
         gsap.to(group2.children, {
             y: 0, 
             opacity: 1, 
             duration: 3, 
             ease: 'bounce.out',
             stagger: 0.2,
-            delay: 0.5 // Легкая задержка перед началом
+            delay: 0.5 
         });
 
-        // Падение для группы 1
         gsap.to(group1.children, {
             y: 0, 
             opacity: 1, 
             duration: 3, 
             ease: 'bounce.out',
             stagger: 0.2,
-            delay: 0.9 // Больше задержки перед началом
+            delay: 0.9 
         });
     };
 
-    // Анимация моргания пикселей слева направо
     const blinkPixelsWave = () => {
         const pixelElements = pixelContainerRef.current.querySelectorAll('rect');
         const pixelArray = Array.from(pixelElements);
@@ -90,7 +84,6 @@ function AnimationSection({ isHovered }) {
         });
     };
 
-    // Инициализация ScrollTrigger для запуска анимации падения
     useEffect(() => {
         ScrollTrigger.create({
             trigger: sectionRef.current,
@@ -100,7 +93,6 @@ function AnimationSection({ isHovered }) {
         });
     }, []);
 
-    // Запуск анимации моргания пикселей
     useEffect(() => {
         if (isHovered) {
             blinkPixelsWave();

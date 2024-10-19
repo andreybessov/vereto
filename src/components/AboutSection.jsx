@@ -6,7 +6,7 @@ import divederRightColor from '../assets/about-diveder-right.png';
 function AboutSection() {
     const typingElementRef = useRef(null); 
     const typedInstanceRef = useRef(null); 
-    const [animationStarted, setAnimationStarted] = useState(false); // Для отслеживания запуска анимации
+    const [animationStarted, setAnimationStarted] = useState(false); 
 
     useEffect(() => {
         const options = {
@@ -20,9 +20,9 @@ function AboutSection() {
         const handleIntersection = (entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !animationStarted) {
-                    // Запускаем анимацию только один раз
+                    
                     typedInstanceRef.current = new Typed("#typingTextAbout", options);
-                    setAnimationStarted(true); // Помечаем, что анимация была запущена
+                    setAnimationStarted(true); 
                 }
             });
         };
@@ -40,7 +40,7 @@ function AboutSection() {
                 observer.unobserve(typingElementRef.current); 
             }
         };
-    }, [animationStarted]); // Добавили зависимость от animationStarted
+    }, [animationStarted]); 
 
     return (
         <section id='about-section' className="about-section" ref={typingElementRef}>

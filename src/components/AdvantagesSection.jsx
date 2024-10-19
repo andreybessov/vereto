@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Typed from 'typed.js';
-import Slider from 'react-slick'; // Импортируем слайдер
-import prevArrowIcon from '../assets/prevArrow.svg'; // Иконка для кнопки назад
-import nextArrowIcon from '../assets/nextArrow.svg'; // Иконка для кнопки вперед
+import Slider from 'react-slick'; 
+import prevArrowIcon from '../assets/prevArrow.svg'; 
+import nextArrowIcon from '../assets/nextArrow.svg';
 import divederLeftColor from '../assets/about-diveder-left.png';
 import divederRightColor from '../assets/about-diveder-right.png';
 import teamCard1 from '../assets/team-card1.png';
@@ -11,7 +11,6 @@ import teamCard3 from '../assets/team-card3.png';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Компоненты для стрелок слайдера с SVG
 const CustomPrevArrow = ({ onClick }) => (
   <button className="custom-arrow custom-arrow-prev" onClick={onClick}>
     <img src={prevArrowIcon} alt="Prev" />
@@ -51,12 +50,12 @@ function AdvantagesSection() {
     ];
 
     const [activeMember, setActiveMember] = useState(teamMembers[0]);
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Состояние для мобильного вида
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768); 
     const typingElementRef = useRef(null);
     const typedInstanceRef = useRef(null);
     const [animationStarted, setAnimationStarted] = useState(false);
 
-    const sliderRef = useRef(null); // Создаем ref для слайдера
+    const sliderRef = useRef(null); 
 
     useEffect(() => {
         const handleResize = () => {
@@ -96,21 +95,19 @@ function AdvantagesSection() {
         };
     }, [animationStarted]);
 
-    // Настройки слайдера для мобильной версии
     const sliderSettings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false, // Отключаем стандартные стрелки
-        beforeChange: (current, next) => setActiveMember(teamMembers[next]), // Обновляем активного члена команды
+        arrows: false, 
+        beforeChange: (current, next) => setActiveMember(teamMembers[next]), 
     };
 
     return (
         <section id="advantages-section" className="advantages-section" ref={typingElementRef}>
             <div className="container">
-                {/* Анимация текста "Чим ми кращі?" */}
                 <div className="advantages-section__text-container">
                     <div className="advantages-section__span-container">
                         <span className="advantages-section__text-animation">
@@ -119,13 +116,11 @@ function AdvantagesSection() {
                             <img className="advantages-section__diveder" src={divederRightColor} alt="diveder-right" />
                         </span>
 
-                        {/* Текст цитаты для десктопной версии, помещаем span в container */}
                         {!isMobile && (
                             <span className="advantages-section__span-el">{activeMember.quoteFirstPart}</span>
                         )}
                     </div>
 
-                    {/* Текст цитаты для десктопной версии, который идет отдельно */}
                     {!isMobile && (
                         <>
                             <p className="advantages-section__text">{activeMember.quoteSecondPart}</p>
@@ -133,7 +128,6 @@ function AdvantagesSection() {
                     )}
                 </div>
 
-                {/* Мобильная версия: Слайдер */}
                 {isMobile ? (
                     <>
                         <Slider {...sliderSettings} className="advantages-section__slider" ref={sliderRef}>
@@ -150,13 +144,11 @@ function AdvantagesSection() {
                             ))}
                         </Slider>
 
-                        {/* Текст под карточкой для мобильной версии */}
                         <div className="advantages-section__text-container-below">
                             <span className="advantages-section__span-el">{activeMember.quoteFirstPart}</span>
                             <p className="advantages-section__text">{activeMember.quoteSecondPart}</p>
                         </div>
 
-                        {/* Стрелки слайдера, расположенные внизу */}
                         <div className="advantages-section__navigation">
                             <CustomPrevArrow onClick={() => sliderRef.current.slickPrev()} />
                             <CustomNextArrow onClick={() => sliderRef.current.slickNext()} />
