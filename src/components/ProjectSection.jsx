@@ -87,7 +87,7 @@ function ProjectSection() {
                         <span className='project-section__mobile-apostrophe'><img src={apostrophe} alt="'" /></span>
                     </div>
                 </div>
-                <div className="project-section__button-container">
+                <div className='project-section__button-container'>
                     {infoArr.map(item => (
                         <button className={`project-section__button ${activeIndex === item.index ? 'active' : ''}`}
                         onClick={() => handleToggle(item.index)}>
