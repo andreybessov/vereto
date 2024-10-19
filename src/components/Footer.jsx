@@ -1,8 +1,17 @@
 import {ReactComponent as FooterLogo} from '../assets/footer-logo.svg'
 import {ReactComponent as MobileFooterLogo} from '../assets/footer-logo-mobile.svg'
+import { li } from 'framer-motion/client';
 
 
 function Footer() {
+    const linkList = [
+        {href: '#about-section', label: 'Про нас'},
+        {href: '#project-section', label: 'Послуги'},
+        {href: '#case-section', label: 'Кейси'},
+        {href: '#advantages-section', label: 'Команда'},
+        {href: '#contact-email', label: 'Контакти'}
+    ];
+
     return(
         <footer className="footer">
             <div className="container">
@@ -17,18 +26,11 @@ function Footer() {
                 </div>
             </div>
             <ul className="footer__menu">
-                <li>
-                    <a className="footer__link" href="#about-section">Про нас</a>
-                </li>
-                <li>
-                    <a className="footer__link" href="#project-section">Послуги</a>
-                </li>
-                <li>
-                    <a className="footer__link" href="#case-section">Кейси</a>
-                </li>
-                <li>
-                    <a className="footer__link" href="#advantages-section">Команда</a>
-                </li>
+                {linkList.map(item => (
+                    <li>
+                        <a className='footer__link' href={item.href}>{item.label}</a>
+                    </li>
+                ))}
             </ul>
             </div>
             <div className="footer__policy-container">          

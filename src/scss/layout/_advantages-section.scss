@@ -53,6 +53,7 @@
 
         @media screen and (min-width:$bp-mobile) {
             font-size: 3.125vw;
+            line-height: 64px;
         }
     }
 
@@ -69,6 +70,8 @@
 
         @media screen and (min-width:$bp-mobile) {
             font-size: 3.333vw;
+            line-height: 64px;
+            text-align: justify;
         }
     }
 
@@ -98,8 +101,7 @@
             filter: opacity(1);
             transition: filter .3s ease-in-out;
 
-            h3,
-            p {
+            .advantages-section__card-title {
                 color: var(--color-white);
                 transition: color .3s ease-in-out;
             }
@@ -116,7 +118,7 @@
 
         @media screen and (min-width:$bp-mobile) {
             font-size: 1.667vw;
-            margin: 32px 0 0;
+            margin: 28px 0 0;
             color: var(--button-default-color);
         }
     }
@@ -168,4 +170,12 @@
 
 .active {
     filter: opacity(1);
+
+    .advantages-section__card-title {
+        color: var(--color-white);
+    }
+
+    .advantages-section__card-text {
+        color: var(--color-contact-info);
+    }
 }

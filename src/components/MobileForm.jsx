@@ -70,7 +70,7 @@ function MobileForm() {
             </div>
             <div className="mobile-form__form-container">
                 <div className="container">
-                    <form id='contact-email' className="mobile-form_form" autoComplete='off' onSubmit={handleSubmit}>
+                    <form id='contact-email-mb' className="mobile-form_form" autoComplete='off' onSubmit={handleSubmit}>
                         <div className="mobile-form__name">
                             <label htmlFor='contact-user-name'></label>
                             <input className="mobile-form__input" type="text" name="contact-user-name" required id='contact-user-name' placeholder="ІМ'Я"/>

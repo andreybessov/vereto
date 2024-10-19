@@ -5,7 +5,7 @@
     background-color: var(--color-white);
 
     @media screen and (min-width:$bp-mobile) {
-        padding: 150px 0 124px;
+        padding: 72px 0 124px;
     }
 
     &__title-first-element {
@@ -115,6 +115,7 @@
         font-size: 1.146vw;
         justify-content: start;
         margin-bottom: 1.563vw;
+        width: 23.125vw;
         }
 
         p {
@@ -139,6 +140,7 @@
         &:nth-child(2) {
             display: flex;
             justify-content: space-between;
+            margin-top: -2.5vw;
         }
     }
     }
@@ -189,6 +191,10 @@
             padding: 0 0 0 15px;
             height: 64px;
 
+            &:first-child {
+                display: none;
+            }
+
             p {
                 margin: 0;
             }
@@ -221,6 +227,14 @@
             color: var(--primary-color);
             padding: 0;
             transition: background, color, padding, .5s ease-in-out;
+
+            &:first-child {
+                display: flex;
+            }
+
+            &:last-child {
+                display: none;
+            }
 
             svg {
                 height: 3.75vw;
@@ -285,70 +299,6 @@
         }
     }
     }
-
-    // &__button {
-    //     display: flex;
-    //     width: 100%;
-    //     margin-top: 80px;
-    //     padding: 0;
-    //     font-size: 1.875vw; 
-    //     font-weight: 800;
-    //     justify-content: space-between;
-    //     align-items: center;
-    //     background-color: transparent;
-    //     text-transform: uppercase;
-    //     height: 3.802vw;
-    //     cursor: pointer;
-    //     border: none;
-    //     border-bottom: 1px solid var(--primary-color);
-    //     height: 3.802vw;
-    //     color: var(--primary-color);
-    //     text-decoration: none;
-    //     transition: .5s ease-in-out;
-
-    //     svg {
-    //         width: 3.75vw;
-    //         height: 3.75vw;
-    //         transition: .5s ease-in-out;
-    //     }
-         
-    //     p {
-    //         margin: 0;
-    //     }
-    // }
-
-    // .button-container {
-    //     &:hover {
-    //         background: var(--color-brand-ligth);
-    //         color: var(--color-white);
-    //         padding: 0 0 0 15px;
-    //         border-bottom: none;
-    //         transition: background, color, padding, .5s ease-in-out;
-             
-    //         svg {
-    //             transform: rotate(15deg);
-    //             transition: transform .5s ease-in-out;
-    //         }
-
-
-    //         path:nth-child(3){
-    //             fill: var(--color-white);         
-    //         }
-
-    //         path:nth-child(4){
-    //             fill: var(--color-white);         
-    //         }
-
-    //         path:nth-child(5){
-    //             fill: var(--color-white);         
-    //         }
-    //     }
-
-    //     &:active {
-    //         background-color: var(--color-brand-dark);
-    //         color: var(--color-white)
-    //     }
-    // }
 
     &__arrow {
         height: 32px;

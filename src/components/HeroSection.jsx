@@ -59,7 +59,10 @@ function HeroSection() {
                         </div>
                     </div>
                         <div className="hero-section__button">
-                        <a href='#contact-email'>
+                        <a className='hero-section__desktop-button' href='#contact-email'>
+                            <p>Почати партнерство</p><Arrow/>
+                        </a>
+                        <a className='hero-section__mobile-button' href='#contact-email-mb'>
                             <p>Почати партнерство</p><Arrow/>
                         </a>
                         </div>

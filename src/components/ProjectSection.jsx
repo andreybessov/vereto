@@ -75,7 +75,7 @@ function ProjectSection() {
                             <p>реалізує</p>
                             <p>VERETO?</p>
                         </span>
-                        <span><img src={apostrophe} alt="'" /></span>
+                        <span className='project-section__mobile-apostrophe'><img src={apostrophe} alt="'" /></span>
                     </div>
                 </div>
 
@@ -251,7 +251,10 @@ function ProjectSection() {
                     </button>
                 </div>
                 <div className="project-section__hero-button">
-                        <a href='#contact-email'>
+                        <a className='project-section__mobile-button' href='#contact-email'>
+                            <p>Почати партнерство</p><Arrow/>
+                        </a>
+                        <a className='project-section__mobile-button' href='#contact-email-mb'>
                             <p>Почати партнерство</p><Arrow/>
                         </a>
                         </div>

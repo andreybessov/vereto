@@ -46,6 +46,7 @@
             margin: 0;
             max-width: max-content;
             margin-right: 12.5vw;
+            line-height: 64px;
         
         }
     }
@@ -62,6 +63,8 @@
 
         @media screen and (min-width:$bp-mobile) {
         font-size: 3.125vw;
+        line-height: 64px;
+        text-align: justify;
 
         span {
             font-size: 3.333vw;
