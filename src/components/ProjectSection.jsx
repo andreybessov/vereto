@@ -93,7 +93,7 @@ function ProjectSection() {
                         onClick={() => handleToggle(item.index)}>
 
                         <span className="project-section__button-span1">
-                            <img className="project-section__diveder" src={divederLeft} alt="[" />
+                            <img className="project-section__diveder" src={divederLeft} alt='[' />
                             <p>{item.number}</p>
                             <img className="project-section__diveder" src={divederRight} alt="}" />
                     </span>
