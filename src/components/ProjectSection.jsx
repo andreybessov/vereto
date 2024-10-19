@@ -87,9 +87,8 @@ function ProjectSection() {
                         <span className='project-section__mobile-apostrophe'><img src={apostrophe} alt="'" /></span>
                     </div>
                 </div>
-
+                <div className="project-section__button-container">
                     {infoArr.map(item => (
-                        <div className="project-section__button-container">
                         <button className={`project-section__button ${activeIndex === item.index ? 'active' : ''}`}
                         onClick={() => handleToggle(item.index)}>
 
@@ -116,8 +115,8 @@ function ProjectSection() {
                             </motion.div>
                         </span>
                     </button>
-                    </div>
                      ))}
+                     </div>
                 <div className="project-section__hero-button">
                         <a className='project-section__mobile-button' href='#contact-email'>
                             <p>Почати партнерство</p><Arrow/>
