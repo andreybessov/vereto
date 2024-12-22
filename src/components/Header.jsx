@@ -69,7 +69,6 @@ function Header() {
 
     return (
         <>
-            {/* Хедер */}
             <header className={`header ${showHeader ? 'show' : 'hide'} ${!isAtTop ? 'no-border' : ''}`}>
                 <div className="container">
                     <div className={`header__container ${!isAtTop ? 'no-border-mobile' : ''}`}>
