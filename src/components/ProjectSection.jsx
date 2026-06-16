@@ -13,12 +13,11 @@ function ProjectSection() {
     const typedInstanceRef = useRef(null);
     const [animationStarted, setAnimationStarted] = useState(false); 
     const infoArr = [
-        {index: 0, number: '01', title: 'WEB ДИЗАЙН', element1: 'LANDING PAGE', element2: 'ПОРТФОЛІО', element3: 'ПРОМО-САЙТ', element4: 'САЙТ ДЛЯ ІВЕНТІВ'},
-        {index: 1, number: '02', title: 'UX/UI ДИЗАЙН', element1: 'КОРПОРАТИВНИЙ САЙТ', element2: 'ONLINE МАГАЗИН', element3: 'МАРКЕТПЛЕЙС', element4: 'SAAS'},
-        {index: 2, number: '03', title: 'BRANDING', element1: 'ФІРМОВИЙ СТИЛЬ', element2: 'ЛОГОТИП', element3: 'БРЕНДБУК', element4: 'АЙДЕНТИКА'},
-        {index: 3, number: '04', title: 'SOCIAL MEDIA', element1: 'СОЦІАЛЬНІ МЕРЕЖІ', element2: 'КОНТЕНТ-МАРКЕТИНГ', element3: 'SMO', element4: 'МЕНЕДЖМЕНТ'},
-        {index: 4, number: '05', title: 'МЕРЧ', element1: 'ОДЯГ', element2: 'АКСЕСУАРИ', element3: 'ПОЛІГРАФІЯ', element4: 'БРЕНДОВАНА ПРОДУКЦІЯ'},
-        {index: 5, number: '06', title: 'MAINTENANCE', element1: 'ТЕХНІЧНА ПІДТРИМКА', element2: 'КОНСУЛЬТАЦІЇ', element3: 'ОНОВЛЕННЯ', element4: 'БЕКАП'}
+        {index: 0, number: '01', title: 'UX/UI ДИЗАЙН', element1: 'LANDING PAGE', element2: 'КОРПОРАТИВНИЙ САЙТ', element3: 'ONLINE МАГАЗИН', element4: 'МАРКЕТПЛЕЙС'},
+        {index: 1, number: '02', title: 'Auto/Ai BS', element1: 'Автоматизація бізнесу', element2: 'AI ассистент', element3: 'CRM інтеграція', element4: 'Інтеграція з сервісами'},
+        {index: 2, number: '03', title: 'WEB DEV', element1: 'LANDING PAGE', element2: 'КОРПОРАТИВНИЙ САЙТ', element3: 'ONLINE МАГАЗИН', element4: 'МАРКЕТПЛЕЙС'},
+        {index: 3, number: '04', title: '3D МОДЕЛІ', element1: 'ІЛЮСТРАЦІЇ', element2: 'АНІМАЦІЇ', element3: 'ДЕТАЛІЗАЦІЯ', element4: 'ПРЕЗЕНТАЦІЯ'},
+        {index: 4, number: '05', title: 'ДИЗАЙН', element1: 'ЛОГОТИПИ', element2: 'БРЕНДБУК', element3: 'ПОЛІГРАФІЯ', element4: 'БРЕНДОВАНА ПРОДУКЦІЯ'},
     ]
 
 

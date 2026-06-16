@@ -5,20 +5,21 @@ import prevArrowIcon from '../assets/prevArrow.svg';
 import nextArrowIcon from '../assets/nextArrow.svg';
 import divederLeftColor from '../assets/about-diveder-left.png';
 import divederRightColor from '../assets/about-diveder-right.png';
-import teamCard1 from '../assets/team-card1.png';
-import teamCard2 from '../assets/team-card2.png';
-import teamCard3 from '../assets/team-card3.png';
+import teamCard1 from '../assets/andrii.jpg';
+import teamCard2 from '../assets/vlad.jpg';
+import teamCard3 from '../assets/roman.jpg';
+import teamCard4 from '../assets/viktoria.jpg';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const CustomPrevArrow = ({ onClick }) => (
-  <button className="custom-arrow custom-arrow-prev" onClick={onClick}>
+    <button type="button" className="custom-arrow custom-arrow-prev" onClick={onClick}>
     <img src={prevArrowIcon} alt="Prev" />
   </button>
 );
 
 const CustomNextArrow = ({ onClick }) => (
-  <button className="custom-arrow custom-arrow-next" onClick={onClick}>
+    <button type="button" className="custom-arrow custom-arrow-next" onClick={onClick}>
     <img src={nextArrowIcon} alt="Next" />
   </button>
 );
@@ -26,12 +27,12 @@ const CustomNextArrow = ({ onClick }) => (
 function AdvantagesSection() {
     const teamMembers = [
         {
-            name: 'Яна Травка',
-            role: 'Web & UX/UI Дизайнер',
+            name: 'Роман Лещенко',
+            role: '3D дизайнер',
             quoteFirstPart: 'Дизайн - це не про роботу, це мій',
             quoteSecondPart: <> 
             спосіб життя, я надихаюся кожним процесом, від ідеї до реалізації.  <span className='advantages-section__highlighted-text'>  Як казав Генрі Мур: Мистецтво — це спосіб бачити речі по-іншому. </span> Не важливо, чи у вас є ідея, чи ні — мій досвід дозволяє генерувати, аналізувати і створювати стильні та ефективні рішення'</>,
-            image: teamCard1,
+            image: teamCard3,
         },
         {
             name: 'Владислав Марущенко',
@@ -41,21 +42,38 @@ function AdvantagesSection() {
             image: teamCard2,
         },
         {
+            name: 'Віктоія Авраменко',
+            role: 'UI/UX дизайнер',
+            quoteFirstPart: 'Код — це мова сучасності.',
+            quoteSecondPart: 'Я прагну зробити кожну рядок коду мистецтвом.',
+            image: teamCard4,
+        },
+        {
             name: 'Андрій Дьомкін',
             role: 'Full Stack Розробник',
             quoteFirstPart: 'Код — це мова сучасності.',
             quoteSecondPart: 'Я прагну зробити кожну рядок коду мистецтвом.',
-            image: teamCard3,
+            image: teamCard1,
         },
     ];
 
     const [activeMember, setActiveMember] = useState(teamMembers[0]);
+    const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768); 
     const typingElementRef = useRef(null);
-    const typedInstanceRef = useRef(null);
     const [animationStarted, setAnimationStarted] = useState(false);
 
     const sliderRef = useRef(null); 
+    const activeQuote = (
+        <div className="advantages-section__text-container-below">
+            <span className="advantages-section__span-el advantages-section__span-el--desktop">
+                {activeMember.quoteFirstPart}
+            </span>
+            <p className="advantages-section__text advantages-section__text--desktop">
+                {activeMember.quoteSecondPart}
+            </p>
+        </div>
+    );
 
     useEffect(() => {
         const handleResize = () => {
@@ -81,7 +99,7 @@ function AdvantagesSection() {
         const handleIntersection = (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting && !animationStarted) {
-                    typedInstanceRef.current = new Typed("#advantagesTextAnimation", options);
+                    new Typed("#advantagesTextAnimation", options);
                     setAnimationStarted(true);
                 }
             });
@@ -96,13 +114,31 @@ function AdvantagesSection() {
     }, [animationStarted]);
 
     const sliderSettings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false, 
-        beforeChange: (current, next) => setActiveMember(teamMembers[next]), 
+        afterChange: (current) => {
+            const nextIndex = current % teamMembers.length;
+            setActiveSlideIndex(nextIndex);
+            setActiveMember(teamMembers[nextIndex]);
+        },
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
     };
 
     return (
@@ -117,60 +153,46 @@ function AdvantagesSection() {
                         </span>
 
                         {!isMobile && (
-                            <span className="advantages-section__span-el">{activeMember.quoteFirstPart}</span>
+                            <span className="advantages-section__span-el advantages-section__span-el--desktop">
+                                {activeMember.quoteFirstPart}
+                            </span>
                         )}
                     </div>
 
                     {!isMobile && (
-                        <>
-                            <p className="advantages-section__text">{activeMember.quoteSecondPart}</p>
-                        </>
+                        <p className="advantages-section__text advantages-section__text--desktop">
+                            {activeMember.quoteSecondPart}
+                        </p>
                     )}
                 </div>
 
-                {isMobile ? (
-                    <>
-                        <Slider {...sliderSettings} className="advantages-section__slider" ref={sliderRef}>
-                            {teamMembers.map((member, index) => (
-                                <div key={index}>
-                                    <div className="advantages-section__slide">
-                                        <img src={member.image} alt={member.name} className="advantages-section__image" />
-                                        <div className="advantages-section__info">
-                                            <p className="advantages-section__card-title">{member.name}</p>
-                                            <p className="advantages-section__card-text">{member.role}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </Slider>
-
-                        <div className="advantages-section__text-container-below">
-                            <span className="advantages-section__span-el">{activeMember.quoteFirstPart}</span>
-                            <p className="advantages-section__text">{activeMember.quoteSecondPart}</p>
-                        </div>
-
-                        <div className="advantages-section__navigation">
-                            <CustomPrevArrow onClick={() => sliderRef.current.slickPrev()} />
-                            <CustomNextArrow onClick={() => sliderRef.current.slickNext()} />
-                        </div>
-                    </>
-                ) : (
-                    <ul className="advantages-section__team-list">
-                        {teamMembers.map((member, index) => (
-                            <li
-                                key={index}
-                                className={`advantages-section__item ${activeMember.name === member.name ? 'active' : ''}`}
-                                onClick={() => setActiveMember(member)}
+                <Slider {...sliderSettings} className="advantages-section__slider" ref={sliderRef}>
+                    {teamMembers.map((member, index) => (
+                        <div key={`${member.name}-${index}`}>
+                            <article
+                                className={`advantages-section__slide ${activeSlideIndex === index ? 'advantages-section__slide--active' : ''}`}
+                                onClick={() => {
+                                    sliderRef.current?.slickGoTo(index);
+                                    setActiveSlideIndex(index);
+                                    setActiveMember(member);
+                                }}
                             >
-                                <article className="advantages-section__card">
-                                    <img src={member.image} alt={member.name} />
-                                </article>
-                                <p className="advantages-section__card-title">{member.name}</p>
-                                <p className="advantages-section__card-text">{member.role}</p>
-                            </li>
-                        ))}
-                    </ul>
-                )}
+                                <img src={member.image} alt={member.name} className="advantages-section__image" />
+                                <div className="advantages-section__info">
+                                    <p className="advantages-section__card-title">{member.name}</p>
+                                    <p className="advantages-section__card-text">{member.role}</p>
+                                </div>
+                            </article>
+                        </div>
+                    ))}
+                </Slider>
+
+                <div className="advantages-section__navigation">
+                    <CustomPrevArrow onClick={() => sliderRef.current?.slickPrev()} />
+                    <CustomNextArrow onClick={() => sliderRef.current?.slickNext()} />
+                </div>
+
+                {isMobile && activeQuote}
             </div>
         </section>
     );

@@ -61,6 +61,7 @@
         font-weight: 500;
         font-size: 4.167vw;
         margin: 0;
+        width: 100%;
 
         span {
             font-weight: 700;
@@ -72,22 +73,33 @@
             font-size: 3.333vw;
             line-height: 64px;
             text-align: justify;
+            width: 100%;
         }
+    }
+
+    &__text--desktop {
+        width: 100%;
+
+        @media screen and (min-width:$bp-mobile) {
+            width: 100%;
+        }
+    }
+
+    &__span-el--desktop {
+        display: block;
     }
 
     &__team-list {
         display: flex;
         padding: 0;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-top: 3.333vw;
     }
 
     &__card {
-        background: white url('../../assets/Logo-team.png');
-        background-repeat: no-repeat;
-
         img {
-            max-width: 29.479vw;
+            max-width: 27.479vw;
+            max-height: 20.479vw;
         }
     }
 
@@ -137,12 +149,16 @@
 
     &__text-container {
         height: 100%;
+        margin-bottom: 24px;
+
+        @media screen and (min-width:$bp-mobile) {
+            height: 370px;
+        }
     }
 
     &__image {
-        max-width: 409px;
-        background: var(--color-white) url(../../assets/Logo-team.png) no-repeat;
-        background-size: contain;
+        max-width: 100%;
+        max-height: 500px;
     }
 
     &__button-prev {
@@ -150,16 +166,58 @@
         border: none;
     }
 
+    &__slider {
+        margin-top: 3.333vw;;
+
+        .slick-list {
+            margin: 0 -12px;
+        }
+
+        .slick-slide > div {
+            padding: 0 12px;
+        }
+    }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0.45;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--color-white);
+    }
+
+    &__slide--active {
+        opacity: 1;
+        transform: translateY(-2px);
+    }
+
+    &__info {
+        margin-top: 16px;
+    }
+
     &__navigation {
         display: flex;
         justify-content: space-between;
+        margin-top: 24px;
+        align-items: center;
         
-        :first-child,
-        :last-child {
+        button {
             background-color: transparent;
             border: none;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
         }
         
+    }
+
+    &__text-container-below {
+        width: 100%;
     }
 
     &__highlighted-text {
