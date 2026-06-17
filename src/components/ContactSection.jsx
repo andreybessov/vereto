@@ -66,7 +66,7 @@ function ContactSection() {
     };
   }, [showMessage]);
 
-  // Функция для отправки формы в Telegram
+  // Функция для отправки формы через Make webhook
   const handleSubmit = (event) => {
     event.preventDefault(); // Предотвращаем перезагрузку страницы
 
@@ -75,44 +75,38 @@ function ContactSection() {
     const userTelegram = event.target['contact-user-tg'].value;
     const userMessage = event.target['contact-user-text'].value;
 
-    const message = `
-      Ім'я: ${userName}\n
-      Email: ${userEmail}\n
-      Telegram: ${userTelegram}\n
-      Повідомлення: ${userMessage}
-    `;
+    const makeWebhookUrl = 'https://hook.eu1.make.com/ww8ftpi66ck2rvpkdjmb07hdvp69j4jn';
 
-    const chatId = '-1002178182822';
-    const botToken = '7387426420:AAEf3GE0-pYfXeWtTZBkF3BgQQ9Hup_GTKs';
-    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
-    fetch(url, {
+    fetch(makeWebhookUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        chat_id: chatId,
-        text: message,
+        name: userName,
+        email: userEmail,
+        telegram: userTelegram,
+        message: userMessage,
       }),
     })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.ok) {
-          // Успешная отправка
-          setFormSubmitted(true);
-          setShowMessage(true);
-          event.target.reset(); // Очистка формы
-
-          // Анимация формы после отправки
-          gsap.to(formBlockRef.current, {
-            y: '100%', 
-            duration: 1.5,
-            ease: 'power3.inOut',
-          });
-        } else {
-          alert('Щось пішло не так. Спробуйте ще раз.');
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
+        return response.json();
+      })
+      .then(() => {
+        // Успешная отправка
+        setFormSubmitted(true);
+        setShowMessage(true);
+        event.target.reset(); // Очистка формы
+
+        // Анимация формы после отправки
+        gsap.to(formBlockRef.current, {
+          y: '100%', 
+          duration: 1.5,
+          ease: 'power3.inOut',
+        });
       })
       .catch((error) => {
         console.error('Помилка при надсиланні:', error);
